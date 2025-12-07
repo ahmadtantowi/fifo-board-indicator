@@ -1,4 +1,10 @@
-# FIFO Board Indicator — PlatformIO Setup
+# FIFO Board Indicator
+
+A FIFO box indicator board utilizing LED lamps to visually guide users on the order of box usage.
+
+![Diagram](assets/diagram.png)
+
+# PlatformIO Setup
 
 This guide explains how to set up and build the project using PlatformIO CLI and how to generate a `compile_commands.json` (compiledb) file so your editor's C/C++ language server (clangd / IntelliSense) can find Arduino and library headers (e.g. `Wire.h`, `Adafruit_GFX.h`, etc.).
 
@@ -180,9 +186,9 @@ How to use the diagram and run code:
 4. Click Run to compile and start the simulation. Open the Serial Monitor to view serial output and use the on-screen controls to interact with simulated inputs (keypad, switches, etc.).
 
 Preview (screenshot)
-Below is a screenshot of the Wokwi editor showing the loaded diagram. The image is included in the repository under `wokwi/diagram.png`.
+Below is a screenshot of the Wokwi editor showing the loaded diagram. The image is included in the repository under `assets/wokwi_diagram.png`.
 
-![Wokwi diagram screenshot](wokwi/diagram.png)
+![Wokwi diagram screenshot](assets/wokwi_diagram.png)
 
 Additional notes:
 - A copy of the diagram JSON has been saved to `assets/wokwi-diagram.json` for quick access.

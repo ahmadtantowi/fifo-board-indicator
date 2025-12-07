@@ -7,7 +7,7 @@
       "type": "board-esp32-s3-devkitc-1",
       "id": "esp1",
       "top": -44.02,
-      "left": 168.23,
+      "left": 177.83,
       "rotate": 180,
       "attrs": {}
     },
@@ -78,14 +78,14 @@
       "type": "wokwi-membrane-keypad",
       "id": "keypad1",
       "top": 257.2,
-      "left": 5.6,
+      "left": 15.2,
       "attrs": {}
     },
     {
       "type": "board-ssd1306",
       "id": "oled1",
       "top": 127.94,
-      "left": 9.83,
+      "left": 19.43,
       "attrs": { "i2cAddress": "0x3c" }
     },
     {
@@ -171,7 +171,7 @@
       "id": "text1",
       "top": 38.4,
       "left": 652.8,
-      "attrs": { "text": "12v \nPower &\nLED" }
+      "attrs": { "text": "12v \nPower\n& LED" }
     },
     {
       "type": "wokwi-text",
@@ -184,77 +184,77 @@
       "type": "wokwi-74hc595",
       "id": "sr2",
       "top": 56.4,
-      "left": 831.04,
+      "left": 1128.64,
       "attrs": {}
     },
     {
       "type": "wokwi-relay-module",
       "id": "relay9",
       "top": 96.2,
-      "left": 921.6,
+      "left": 1219.2,
       "attrs": {}
     },
     {
       "type": "wokwi-relay-module",
       "id": "relay10",
       "top": 153.8,
-      "left": 921.6,
+      "left": 1219.2,
       "attrs": {}
     },
     {
       "type": "wokwi-relay-module",
       "id": "relay11",
       "top": 211.4,
-      "left": 921.6,
+      "left": 1219.2,
       "attrs": {}
     },
     {
       "type": "wokwi-relay-module",
       "id": "relay12",
       "top": 269,
-      "left": 921.6,
+      "left": 1219.2,
       "attrs": {}
     },
     {
       "type": "wokwi-relay-module",
       "id": "relay13",
       "top": 326.6,
-      "left": 921.6,
+      "left": 1219.2,
       "attrs": {}
     },
     {
       "type": "wokwi-relay-module",
       "id": "relay14",
       "top": 384.2,
-      "left": 921.6,
+      "left": 1219.2,
       "attrs": {}
     },
     {
       "type": "wokwi-relay-module",
       "id": "relay15",
       "top": 441.8,
-      "left": 921.6,
+      "left": 1219.2,
       "attrs": {}
     },
     {
       "type": "wokwi-relay-module",
       "id": "relay16",
       "top": 499.4,
-      "left": 921.6,
+      "left": 1219.2,
       "attrs": {}
     },
     {
       "type": "wokwi-vcc",
       "id": "vcc2",
       "top": 58.36,
-      "left": 1046.4,
+      "left": 1344,
       "attrs": {}
     },
     {
       "type": "wokwi-led",
       "id": "led9",
       "top": 104.4,
-      "left": 1072.2,
+      "left": 1369.8,
       "rotate": 90,
       "attrs": { "color": "green" }
     },
@@ -262,14 +262,14 @@
       "type": "wokwi-gnd",
       "id": "gnd2",
       "top": 566.4,
-      "left": 1055.4,
+      "left": 1353,
       "attrs": {}
     },
     {
       "type": "wokwi-led",
       "id": "led10",
       "top": 162,
-      "left": 1072.2,
+      "left": 1369.8,
       "rotate": 90,
       "attrs": { "color": "green" }
     },
@@ -277,7 +277,7 @@
       "type": "wokwi-led",
       "id": "led11",
       "top": 219.6,
-      "left": 1072.2,
+      "left": 1369.8,
       "rotate": 90,
       "attrs": { "color": "green" }
     },
@@ -285,7 +285,7 @@
       "type": "wokwi-led",
       "id": "led12",
       "top": 277.2,
-      "left": 1072.2,
+      "left": 1369.8,
       "rotate": 90,
       "attrs": { "color": "green" }
     },
@@ -293,7 +293,7 @@
       "type": "wokwi-led",
       "id": "led13",
       "top": 334.8,
-      "left": 1072.2,
+      "left": 1369.8,
       "rotate": 90,
       "attrs": { "color": "green" }
     },
@@ -301,7 +301,7 @@
       "type": "wokwi-led",
       "id": "led14",
       "top": 392.4,
-      "left": 1072.2,
+      "left": 1369.8,
       "rotate": 90,
       "attrs": { "color": "green" }
     },
@@ -309,7 +309,7 @@
       "type": "wokwi-led",
       "id": "led15",
       "top": 450,
-      "left": 1072.2,
+      "left": 1369.8,
       "rotate": 90,
       "attrs": { "color": "green" }
     },
@@ -317,7 +317,7 @@
       "type": "wokwi-led",
       "id": "led16",
       "top": 507.6,
-      "left": 1072.2,
+      "left": 1369.8,
       "rotate": 90,
       "attrs": { "color": "green" }
     },
@@ -325,22 +325,197 @@
       "type": "wokwi-text",
       "id": "text3",
       "top": 38.4,
-      "left": 1075.2,
+      "left": 1372.8,
       "attrs": { "text": "12v \nPower &\nLED" }
     },
     {
       "type": "wokwi-text",
       "id": "text4",
       "top": 38.4,
-      "left": 931.2,
+      "left": 1228.8,
       "attrs": { "text": "Shift Register\n#28" }
     },
     {
-      "type": "wokwi-text",
-      "id": "text5",
-      "top": 288,
-      "left": 758.4,
-      "attrs": { "text": "..." }
+      "type": "wokwi-74hc595",
+      "id": "sr3",
+      "top": 94.8,
+      "left": 725.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr4",
+      "top": 162,
+      "left": 725.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr5",
+      "top": 229.2,
+      "left": 725.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr6",
+      "top": 296.4,
+      "left": 725.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr7",
+      "top": 363.6,
+      "left": 725.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr8",
+      "top": 430.8,
+      "left": 725.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr9",
+      "top": 498,
+      "left": 725.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr10",
+      "top": 565.2,
+      "left": 725.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr11",
+      "top": 94.8,
+      "left": 859.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr12",
+      "top": 162,
+      "left": 859.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr13",
+      "top": 229.2,
+      "left": 859.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr14",
+      "top": 296.4,
+      "left": 859.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr15",
+      "top": 363.6,
+      "left": 859.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr16",
+      "top": 430.8,
+      "left": 859.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr17",
+      "top": 498,
+      "left": 859.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr18",
+      "top": 565.2,
+      "left": 859.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr19",
+      "top": 94.8,
+      "left": 994.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr20",
+      "top": 162,
+      "left": 994.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr21",
+      "top": 229.2,
+      "left": 994.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr22",
+      "top": 296.4,
+      "left": 994.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr23",
+      "top": 363.6,
+      "left": 994.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr24",
+      "top": 430.8,
+      "left": 994.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr25",
+      "top": 498,
+      "left": 994.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr26",
+      "top": 565.2,
+      "left": 994.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr27",
+      "top": 632.4,
+      "left": 725.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr28",
+      "top": 632.4,
+      "left": 859.84,
+      "attrs": {}
     }
   ],
   "connections": [
@@ -478,17 +653,283 @@
       "relay16:VCC",
       "relay8:VCC",
       "red",
-      ["h-19.2", "v105.6", "h-422.4", "v-105.6"]
+      ["h-19.2", "v163.2", "h-720", "v-163.2"]
     ],
     [
       "relay8:GND",
       "relay16:GND",
       "black",
-      ["h-9.6", "v86", "h412.8", "v0", "h9.6", "v-86.4"]
+      ["h-9.6", "v143.6", "h720", "v-143.6"]
     ],
-    ["sr1:Q7S", "sr2:DS", "#8f4814", ["h0", "v-27.6", "h374.4"]],
-    ["sr1:STCP", "sr2:STCP", "blue", ["v-46.8", "h422.4", "v9.6"]],
-    ["sr1:SHCP", "sr2:SHCP", "orange", ["v-37.2", "h422.4"]]
+    ["sr1:STCP", "sr2:STCP", "blue", ["v-46.8", "h720", "v46.8"]],
+    ["sr1:SHCP", "sr2:SHCP", "orange", ["v-37.2", "h422.4"]],
+    ["sr3:MR", "sr3:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr4:MR", "sr4:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr3:Q7S", "sr4:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr4:STCP", "sr3:STCP", "blue", ["v-18", "h48", "v-76.8", "h-48"]],
+    ["sr3:SHCP", "sr4:SHCP", "orange", ["v-37.2", "h48", "v96", "h-48"]],
+    ["sr3:VCC", "sr4:VCC", "red", ["v10.8", "h-9.6", "v48", "h9.6"]],
+    ["sr3:OE", "sr4:OE", "black", ["v-8.4", "h-48", "v57.6", "h48"]],
+    ["sr5:MR", "sr5:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr6:MR", "sr6:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr5:Q7S", "sr6:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr6:STCP", "sr5:STCP", "blue", ["v-18", "h48", "v-67.2", "h-48"]],
+    ["sr5:SHCP", "sr6:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr5:VCC", "sr6:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr5:OE", "sr6:OE", "black", ["v-18", "h-48", "v67.2", "h9.6"]],
+    ["sr4:VCC", "sr5:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr4:OE", "sr5:OE", "black", ["v-18", "h-48", "v67.2", "h48"]],
+    [
+      "sr4:Q7S",
+      "sr5:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h9.6", "v28.8", "h-57.6"]
+    ],
+    ["sr4:STCP", "sr5:STCP", "blue", ["v-18", "h48", "v67.2", "h-48"]],
+    ["sr4:SHCP", "sr5:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr7:MR", "sr7:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr8:MR", "sr8:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr7:Q7S", "sr8:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr8:STCP", "sr7:STCP", "blue", ["v-18", "h48", "v-67.2", "h-48"]],
+    ["sr7:SHCP", "sr8:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr7:VCC", "sr8:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr7:OE", "sr8:OE", "black", ["v-18", "h-48", "v67.2", "h9.6"]],
+    ["sr9:MR", "sr9:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr10:MR", "sr10:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr9:Q7S", "sr10:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr10:STCP", "sr9:STCP", "blue", ["v-18", "h48", "v-67.2", "h-48"]],
+    ["sr9:SHCP", "sr10:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr9:VCC", "sr10:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr9:OE", "sr10:OE", "black", ["v-18", "h-48", "v67.2", "h9.6"]],
+    ["sr8:VCC", "sr9:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr8:OE", "sr9:OE", "black", ["v-18", "h-48", "v67.2", "h48"]],
+    [
+      "sr8:Q7S",
+      "sr9:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h9.6", "v28.8", "h-57.6"]
+    ],
+    ["sr8:STCP", "sr9:STCP", "blue", ["v-18", "h48", "v67.2", "h-48"]],
+    ["sr8:SHCP", "sr9:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr6:VCC", "sr7:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    [
+      "sr6:OE",
+      "sr7:OE",
+      "black",
+      ["v-18", "h-48", "v57.6", "h0", "v9.6", "h48"]
+    ],
+    ["sr6:STCP", "sr7:STCP", "blue", ["v-18", "h48", "v67.2", "h-48"]],
+    ["sr6:SHCP", "sr7:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr11:MR", "sr11:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr12:MR", "sr12:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr11:Q7S", "sr12:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr12:STCP", "sr11:STCP", "blue", ["v-18", "h48", "v-76.8", "h-48"]],
+    ["sr11:SHCP", "sr12:SHCP", "orange", ["v-37.2", "h48", "v96", "h-48"]],
+    ["sr11:VCC", "sr12:VCC", "red", ["v10.8", "h-9.6", "v48", "h9.6"]],
+    ["sr11:OE", "sr12:OE", "black", ["v-8.4", "h-48", "v57.6", "h48"]],
+    ["sr13:MR", "sr13:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr14:MR", "sr14:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr13:Q7S", "sr14:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr14:STCP", "sr13:STCP", "blue", ["v-18", "h48", "v-67.2", "h-48"]],
+    ["sr13:SHCP", "sr14:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr13:VCC", "sr14:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr13:OE", "sr14:OE", "black", ["v-18", "h-48", "v67.2", "h9.6"]],
+    ["sr12:VCC", "sr13:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr12:OE", "sr13:OE", "black", ["v-18", "h-48", "v67.2", "h48"]],
+    [
+      "sr12:Q7S",
+      "sr13:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h9.6", "v28.8", "h-57.6"]
+    ],
+    ["sr12:STCP", "sr13:STCP", "blue", ["v-18", "h48", "v67.2", "h-48"]],
+    ["sr12:SHCP", "sr13:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr15:MR", "sr15:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr16:MR", "sr16:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr15:Q7S", "sr16:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr16:STCP", "sr15:STCP", "blue", ["v-18", "h48", "v-67.2", "h-48"]],
+    ["sr15:SHCP", "sr16:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr15:VCC", "sr16:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr15:OE", "sr16:OE", "black", ["v-18", "h-48", "v67.2", "h9.6"]],
+    ["sr17:MR", "sr17:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr18:MR", "sr18:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr17:Q7S", "sr18:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr18:STCP", "sr17:STCP", "blue", ["v-18", "h48", "v-67.2", "h-48"]],
+    ["sr17:SHCP", "sr18:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr17:VCC", "sr18:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr17:OE", "sr18:OE", "black", ["v-18", "h-48", "v67.2", "h9.6"]],
+    ["sr16:VCC", "sr17:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr16:OE", "sr17:OE", "black", ["v-18", "h-48", "v67.2", "h48"]],
+    [
+      "sr16:Q7S",
+      "sr17:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h9.6", "v28.8", "h-57.6"]
+    ],
+    ["sr16:STCP", "sr17:STCP", "blue", ["v-18", "h48", "v67.2", "h-48"]],
+    ["sr16:SHCP", "sr17:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr14:VCC", "sr15:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    [
+      "sr14:OE",
+      "sr15:OE",
+      "black",
+      ["v-18", "h-48", "v57.6", "h0", "v9.6", "h48"]
+    ],
+    ["sr14:STCP", "sr15:STCP", "blue", ["v-18", "h48", "v67.2", "h-48"]],
+    ["sr14:SHCP", "sr15:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr19:MR", "sr19:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr20:MR", "sr20:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr19:Q7S", "sr20:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr20:STCP", "sr19:STCP", "blue", ["v-18", "h48", "v-76.8", "h-48"]],
+    ["sr19:SHCP", "sr20:SHCP", "orange", ["v-37.2", "h48", "v96", "h-48"]],
+    ["sr19:VCC", "sr20:VCC", "red", ["v10.8", "h-9.6", "v48", "h9.6"]],
+    ["sr19:OE", "sr20:OE", "black", ["v-8.4", "h-48", "v57.6", "h48"]],
+    ["sr21:MR", "sr21:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr22:MR", "sr22:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr21:Q7S", "sr22:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr22:STCP", "sr21:STCP", "blue", ["v-18", "h48", "v-67.2", "h-48"]],
+    ["sr21:SHCP", "sr22:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr21:VCC", "sr22:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr21:OE", "sr22:OE", "black", ["v-18", "h-48", "v67.2", "h9.6"]],
+    ["sr20:VCC", "sr21:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr20:OE", "sr21:OE", "black", ["v-18", "h-48", "v67.2", "h48"]],
+    [
+      "sr20:Q7S",
+      "sr21:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h9.6", "v28.8", "h-57.6"]
+    ],
+    ["sr20:STCP", "sr21:STCP", "blue", ["v-18", "h48", "v67.2", "h-48"]],
+    ["sr20:SHCP", "sr21:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr23:MR", "sr23:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr24:MR", "sr24:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr23:Q7S", "sr24:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr24:STCP", "sr23:STCP", "blue", ["v-18", "h48", "v-67.2", "h-48"]],
+    ["sr23:SHCP", "sr24:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr23:VCC", "sr24:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr23:OE", "sr24:OE", "black", ["v-18", "h-48", "v67.2", "h9.6"]],
+    ["sr25:MR", "sr25:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr26:MR", "sr26:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr25:Q7S", "sr26:DS", "#8f4814", ["v10.8", "h9.6", "v28.8", "h-57.6"]],
+    ["sr26:STCP", "sr25:STCP", "blue", ["v-18", "h48", "v-67.2", "h-48"]],
+    ["sr25:SHCP", "sr26:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr25:VCC", "sr26:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr25:OE", "sr26:OE", "black", ["v-18", "h-48", "v67.2", "h9.6"]],
+    ["sr24:VCC", "sr25:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr24:OE", "sr25:OE", "black", ["v-18", "h-48", "v67.2", "h48"]],
+    [
+      "sr24:Q7S",
+      "sr25:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h9.6", "v28.8", "h-57.6"]
+    ],
+    ["sr24:STCP", "sr25:STCP", "blue", ["v-18", "h48", "v67.2", "h-48"]],
+    ["sr24:SHCP", "sr25:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr22:VCC", "sr23:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    [
+      "sr22:OE",
+      "sr23:OE",
+      "black",
+      ["v-18", "h-48", "v57.6", "h0", "v9.6", "h48"]
+    ],
+    ["sr22:STCP", "sr23:STCP", "blue", ["v-18", "h48", "v67.2", "h-48"]],
+    ["sr22:SHCP", "sr23:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    ["sr3:STCP", "sr11:STCP", "blue", ["v-27.6", "h134.4"]],
+    ["sr11:STCP", "sr19:STCP", "blue", ["v-27.6", "h134.4"]],
+    ["sr3:SHCP", "sr11:SHCP", "orange", ["v-37.2", "h134.4"]],
+    ["sr11:SHCP", "sr19:SHCP", "orange", ["v-37.2", "h134.4"]],
+    ["sr1:STCP", "sr3:STCP", "blue", ["v-46.8", "h316.8"]],
+    ["sr1:SHCP", "sr3:SHCP", "orange", ["v-37.2", "h316.8"]],
+    [
+      "sr26:Q7S",
+      "sr2:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h38.4", "v-547.2", "h48"]
+    ],
+    ["sr1:Q7S", "sr3:DS", "#8f4814", ["h0", "v-27.6", "h259.2"]],
+    ["sr27:MR", "sr27:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr10:VCC", "sr27:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr28:MR", "sr28:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr10:STCP", "sr27:STCP", "blue", ["v-18", "h48", "v67.2", "h-48"]],
+    ["sr27:SHCP", "sr10:SHCP", "orange", ["v-8.4", "h48", "v-67.2", "h-48"]],
+    ["sr10:OE", "sr27:OE", "black", ["v-18", "h-48", "v67.2", "h48"]],
+    [
+      "sr10:Q7S",
+      "sr27:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h9.6", "v28.8", "h-57.6"]
+    ],
+    ["sr18:VCC", "sr28:VCC", "red", ["v-8.4", "h-9.6", "v67.2", "h9.6"]],
+    ["sr18:STCP", "sr28:STCP", "blue", ["v-18", "h48", "v67.2", "h-48"]],
+    ["sr18:SHCP", "sr28:SHCP", "orange", ["v-8.4", "h48", "v67.2", "h-48"]],
+    [
+      "sr18:Q7S",
+      "sr28:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h9.6", "v28.8", "h-57.6"]
+    ],
+    ["sr18:OE", "sr28:OE", "black", ["v-18", "h-48", "v67.2", "h48"]],
+    [
+      "sr27:Q7S",
+      "sr11:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h38.4", "v-240", "h0", "v-326.4", "h48"]
+    ],
+    [
+      "sr27:VCC",
+      "relay8:VCC",
+      "red",
+      ["v-8.4", "h-9.6", "v57.6", "h-240", "v-163.2"]
+    ],
+    [
+      "relay8:GND",
+      "sr27:OE",
+      "black",
+      ["h-9.6", "v143.6", "h220.8", "v-57.6", "h48"]
+    ],
+    [
+      "sr28:VCC",
+      "sr27:VCC",
+      "red",
+      ["v-8.4", "h-9.6", "v57.6", "h-134.4", "v-57.6", "h9.6"]
+    ],
+    [
+      "sr26:VCC",
+      "sr28:VCC",
+      "red",
+      ["v-8.4", "h-9.6", "v124.8", "h-134.4", "v-57.6", "h9.6"]
+    ],
+    [
+      "sr26:OE",
+      "sr28:OE",
+      "black",
+      ["v-18", "h-48", "v124.8", "h-134.4", "v-57.6", "h48"]
+    ],
+    [
+      "sr28:OE",
+      "sr27:OE",
+      "black",
+      ["v-18", "h-48", "v57.6", "h-134.4", "v-57.6", "h48"]
+    ],
+    [
+      "sr6:Q7S",
+      "sr7:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h9.6", "v28.8", "h-57.6"]
+    ],
+    [
+      "sr14:Q7S",
+      "sr15:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h9.6", "v28.8", "h-57.6"]
+    ],
+    [
+      "sr22:Q7S",
+      "sr23:DS",
+      "#8f4814",
+      ["h0", "v10.8", "h9.6", "v28.8", "h-57.6"]
+    ],
+    ["sr19:DS", "sr28:Q7S", "#8f4814", ["v-18", "h-48", "v566.4", "h-38.4"]]
   ],
   "dependencies": {}
 }
