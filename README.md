@@ -179,7 +179,13 @@ How to use the diagram and run code:
 3. After the diagram loads, you must add the firmware/sketch in Wokwi's Code or Files panel (paste your `.ino` / `.cpp` source or create a new sketch file). See `wokwi/README.md` for step-by-step instructions.
 4. Click Run to compile and start the simulation. Open the Serial Monitor to view serial output and use the on-screen controls to interact with simulated inputs (keypad, switches, etc.).
 
-Notes:
+Preview (screenshot)
+Below is a screenshot of the Wokwi editor showing the loaded diagram. The image is included in the repository under `wokwi/diagram.png`.
+
+![Wokwi diagram screenshot](wokwi/diagram.png)
+
+Additional notes:
+- A copy of the diagram JSON has been saved to `assets/wokwi-diagram.json` for quick access.
 - Because the repository `diagram.json` does not contain the sketch, you need to paste or create the sketch inside Wokwi before running the simulation.
 - The Wokwi simulation is useful for quick prototyping and visualization but may differ from real hardware. Always verify behavior on physical hardware.
 - If Wokwi reports missing libraries or unsupported components, consult `wokwi/README.md` for troubleshooting and possible substitutions.
