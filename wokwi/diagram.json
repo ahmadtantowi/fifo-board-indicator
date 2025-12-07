@@ -1,0 +1,2898 @@
+{
+  "version": 1,
+  "author": "Gemini Assistant",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": 109.58,
+      "left": 216.23,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr2",
+      "top": -20.4,
+      "left": 456.64,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay2",
+      "top": 19.4,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay3",
+      "top": 77,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay4",
+      "top": 134.6,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay5",
+      "top": 192.2,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay6",
+      "top": 249.8,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay7",
+      "top": 307.4,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay8",
+      "top": 365,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay9",
+      "top": 422.6,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr1",
+      "top": -20.4,
+      "left": 706.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay1",
+      "top": 19.4,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay10",
+      "top": 77,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay11",
+      "top": 134.6,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay12",
+      "top": 192.2,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay13",
+      "top": 249.8,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay14",
+      "top": 307.4,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay15",
+      "top": 365,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay16",
+      "top": 422.6,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr3",
+      "top": -20.4,
+      "left": 955.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay17",
+      "top": 19.4,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay18",
+      "top": 77,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay19",
+      "top": 134.6,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay20",
+      "top": 192.2,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay21",
+      "top": 249.8,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay22",
+      "top": 307.4,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay23",
+      "top": 365,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay24",
+      "top": 422.6,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr4",
+      "top": -20.4,
+      "left": 1205.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay25",
+      "top": 19.4,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay26",
+      "top": 77,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay27",
+      "top": 134.6,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay28",
+      "top": 192.2,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay29",
+      "top": 249.8,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay30",
+      "top": 307.4,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay31",
+      "top": 365,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay32",
+      "top": 422.6,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr5",
+      "top": -20.4,
+      "left": 1455.04,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay33",
+      "top": 19.4,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay34",
+      "top": 77,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay35",
+      "top": 134.6,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay36",
+      "top": 192.2,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay37",
+      "top": 249.8,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay38",
+      "top": 307.4,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay39",
+      "top": 365,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay40",
+      "top": 422.6,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr6",
+      "top": -20.4,
+      "left": 1704.64,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay41",
+      "top": 19.4,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay42",
+      "top": 77,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay43",
+      "top": 134.6,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay44",
+      "top": 192.2,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay45",
+      "top": 249.8,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay46",
+      "top": 307.4,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay47",
+      "top": 365,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay48",
+      "top": 422.6,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr7",
+      "top": -20.4,
+      "left": 1954.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay49",
+      "top": 19.4,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay50",
+      "top": 77,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay51",
+      "top": 134.6,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay52",
+      "top": 192.2,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay53",
+      "top": 249.8,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay54",
+      "top": 307.4,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay55",
+      "top": 365,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay56",
+      "top": 422.6,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr8",
+      "top": -20.4,
+      "left": 2203.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay57",
+      "top": 19.4,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay58",
+      "top": 77,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay59",
+      "top": 134.6,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay60",
+      "top": 192.2,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay61",
+      "top": 249.8,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay62",
+      "top": 307.4,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay63",
+      "top": 365,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay64",
+      "top": 422.6,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr9",
+      "top": -20.4,
+      "left": 2453.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay65",
+      "top": 19.4,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay66",
+      "top": 77,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay67",
+      "top": 134.6,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay68",
+      "top": 192.2,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay69",
+      "top": 249.8,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay70",
+      "top": 307.4,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay71",
+      "top": 365,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay72",
+      "top": 422.6,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr10",
+      "top": -20.4,
+      "left": 2703.04,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay73",
+      "top": 19.4,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay74",
+      "top": 77,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay75",
+      "top": 134.6,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay76",
+      "top": 192.2,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay77",
+      "top": 249.8,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay78",
+      "top": 307.4,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay79",
+      "top": 365,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay80",
+      "top": 422.6,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr11",
+      "top": -20.4,
+      "left": 2952.64,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay81",
+      "top": 19.4,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay82",
+      "top": 77,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay83",
+      "top": 134.6,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay84",
+      "top": 192.2,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay85",
+      "top": 249.8,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay86",
+      "top": 307.4,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay87",
+      "top": 365,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay88",
+      "top": 422.6,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr12",
+      "top": -20.4,
+      "left": 3202.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay89",
+      "top": 19.4,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay90",
+      "top": 77,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay91",
+      "top": 134.6,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay92",
+      "top": 192.2,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay93",
+      "top": 249.8,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay94",
+      "top": 307.4,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay95",
+      "top": 365,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay96",
+      "top": 422.6,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr13",
+      "top": -20.4,
+      "left": 3451.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay97",
+      "top": 19.4,
+      "left": 3542.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay98",
+      "top": 77,
+      "left": 3542.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay99",
+      "top": 134.6,
+      "left": 3542.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay100",
+      "top": 192.2,
+      "left": 3542.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay101",
+      "top": 249.8,
+      "left": 3542.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay102",
+      "top": 307.4,
+      "left": 3542.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay103",
+      "top": 365,
+      "left": 3542.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay104",
+      "top": 422.6,
+      "left": 3542.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr14",
+      "top": -20.4,
+      "left": 3701.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay105",
+      "top": 19.4,
+      "left": 3792,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay106",
+      "top": 77,
+      "left": 3792,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay107",
+      "top": 134.6,
+      "left": 3792,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay108",
+      "top": 192.2,
+      "left": 3792,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay109",
+      "top": 249.8,
+      "left": 3792,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay110",
+      "top": 307.4,
+      "left": 3792,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay111",
+      "top": 365,
+      "left": 3792,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay112",
+      "top": 422.6,
+      "left": 3792,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr15",
+      "top": -20.4,
+      "left": 3951.04,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay113",
+      "top": 19.4,
+      "left": 4041.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay114",
+      "top": 77,
+      "left": 4041.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay115",
+      "top": 134.6,
+      "left": 4041.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay116",
+      "top": 192.2,
+      "left": 4041.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay117",
+      "top": 249.8,
+      "left": 4041.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay118",
+      "top": 307.4,
+      "left": 4041.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay119",
+      "top": 365,
+      "left": 4041.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay120",
+      "top": 422.6,
+      "left": 4041.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr16",
+      "top": -20.4,
+      "left": 4200.64,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay121",
+      "top": 19.4,
+      "left": 4291.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay122",
+      "top": 77,
+      "left": 4291.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay123",
+      "top": 134.6,
+      "left": 4291.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay124",
+      "top": 192.2,
+      "left": 4291.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay125",
+      "top": 249.8,
+      "left": 4291.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay126",
+      "top": 307.4,
+      "left": 4291.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay127",
+      "top": 365,
+      "left": 4291.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay128",
+      "top": 422.6,
+      "left": 4291.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr17",
+      "top": 574.8,
+      "left": 456.64,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay129",
+      "top": 614.6,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay130",
+      "top": 672.2,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay131",
+      "top": 729.8,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay132",
+      "top": 787.4,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay133",
+      "top": 845,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay134",
+      "top": 902.6,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay135",
+      "top": 960.2,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay136",
+      "top": 1017.8,
+      "left": 547.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr18",
+      "top": 574.8,
+      "left": 706.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay137",
+      "top": 614.6,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay138",
+      "top": 672.2,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay139",
+      "top": 729.8,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay140",
+      "top": 787.4,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay141",
+      "top": 845,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay142",
+      "top": 902.6,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay143",
+      "top": 960.2,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay144",
+      "top": 1017.8,
+      "left": 796.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr19",
+      "top": 574.8,
+      "left": 955.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay145",
+      "top": 614.6,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay146",
+      "top": 672.2,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay147",
+      "top": 729.8,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay148",
+      "top": 787.4,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay149",
+      "top": 845,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay150",
+      "top": 902.6,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay151",
+      "top": 960.2,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay152",
+      "top": 1017.8,
+      "left": 1046.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr20",
+      "top": 574.8,
+      "left": 1205.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay153",
+      "top": 614.6,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay154",
+      "top": 672.2,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay155",
+      "top": 729.8,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay156",
+      "top": 787.4,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay157",
+      "top": 845,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay158",
+      "top": 902.6,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay159",
+      "top": 960.2,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay160",
+      "top": 1017.8,
+      "left": 1296,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr21",
+      "top": 574.8,
+      "left": 1455.04,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay161",
+      "top": 614.6,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay162",
+      "top": 672.2,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay163",
+      "top": 729.8,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay164",
+      "top": 787.4,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay165",
+      "top": 845,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay166",
+      "top": 902.6,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay167",
+      "top": 960.2,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay168",
+      "top": 1017.8,
+      "left": 1545.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr22",
+      "top": 574.8,
+      "left": 1704.64,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay169",
+      "top": 614.6,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay170",
+      "top": 672.2,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay171",
+      "top": 729.8,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay172",
+      "top": 787.4,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay173",
+      "top": 845,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay174",
+      "top": 902.6,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay175",
+      "top": 960.2,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay176",
+      "top": 1017.8,
+      "left": 1795.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr23",
+      "top": 574.8,
+      "left": 1954.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay177",
+      "top": 614.6,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay178",
+      "top": 672.2,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay179",
+      "top": 729.8,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay180",
+      "top": 787.4,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay181",
+      "top": 845,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay182",
+      "top": 902.6,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay183",
+      "top": 960.2,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay184",
+      "top": 1017.8,
+      "left": 2044.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr24",
+      "top": 574.8,
+      "left": 2203.84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay185",
+      "top": 614.6,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay186",
+      "top": 672.2,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay187",
+      "top": 729.8,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay188",
+      "top": 787.4,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay189",
+      "top": 845,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay190",
+      "top": 902.6,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay191",
+      "top": 960.2,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay192",
+      "top": 1017.8,
+      "left": 2294.4,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr25",
+      "top": 574.8,
+      "left": 2453.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay193",
+      "top": 614.6,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay194",
+      "top": 672.2,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay195",
+      "top": 729.8,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay196",
+      "top": 787.4,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay197",
+      "top": 845,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay198",
+      "top": 902.6,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay199",
+      "top": 960.2,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay200",
+      "top": 1017.8,
+      "left": 2544,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr26",
+      "top": 574.8,
+      "left": 2703.04,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay201",
+      "top": 614.6,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay202",
+      "top": 672.2,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay203",
+      "top": 729.8,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay204",
+      "top": 787.4,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay205",
+      "top": 845,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay206",
+      "top": 902.6,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay207",
+      "top": 960.2,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay208",
+      "top": 1017.8,
+      "left": 2793.6,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr27",
+      "top": 574.8,
+      "left": 2952.64,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay209",
+      "top": 614.6,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay210",
+      "top": 672.2,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay211",
+      "top": 729.8,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay212",
+      "top": 787.4,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay213",
+      "top": 845,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay214",
+      "top": 902.6,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay215",
+      "top": 960.2,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay216",
+      "top": 1017.8,
+      "left": 3043.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr28",
+      "top": 574.8,
+      "left": 3202.24,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay217",
+      "top": 614.6,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay218",
+      "top": 672.2,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay219",
+      "top": 729.8,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay220",
+      "top": 787.4,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay221",
+      "top": 845,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay222",
+      "top": 902.6,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay223",
+      "top": 960.2,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay224",
+      "top": 1017.8,
+      "left": 3292.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": -19.2,
+      "left": 547.2,
+      "attrs": { "text": "SR1" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": -19.2,
+      "left": 796.8,
+      "attrs": { "text": "SR2" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text3",
+      "top": -19.2,
+      "left": 1046.4,
+      "attrs": { "text": "SR3" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text4",
+      "top": -19.2,
+      "left": 1296,
+      "attrs": { "text": "SR4" }
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": 430,
+      "left": 53.6,
+      "attrs": {}
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 195.14,
+      "left": 57.83,
+      "attrs": { "i2cAddress": "0x3c" }
+    }
+  ],
+  "connections": [
+    ["esp:TX", "$serialMonitor:RX", "", []],
+    ["esp:RX", "$serialMonitor:TX", "", []],
+    ["sr2:Q0", "relay2:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr2:Q1", "relay3:IN", "green", ["v105.6", "h9.6"]],
+    ["sr2:Q2", "relay4:IN", "green", ["v0"]],
+    ["sr2:Q3", "relay5:IN", "green", ["v0"]],
+    ["sr2:Q4", "relay6:IN", "green", ["v278.4", "h57.6"]],
+    ["sr2:Q5", "relay7:IN", "green", ["v0"]],
+    ["sr2:Q6", "relay8:IN", "green", ["v0"]],
+    ["sr2:Q7", "relay9:IN", "green", ["v0"]],
+    ["relay2:GND", "relay3:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay3:GND", "relay4:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay4:GND", "relay5:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay5:GND", "relay6:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay6:GND", "relay7:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay7:GND", "relay8:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay8:GND", "relay9:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay9:VCC", "relay8:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay8:VCC", "relay7:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay7:VCC", "relay6:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay6:VCC", "relay5:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay5:VCC", "relay4:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay4:VCC", "relay3:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay3:VCC", "relay2:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr2:VCC", "relay2:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr2:OE", "relay2:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["esp:12", "sr2:DS", "#8f4814", ["h115.25", "v-220.8", "h57.6"]],
+    ["esp:13", "sr2:SHCP", "orange", ["h105.65", "v-220.8", "h96"]],
+    ["esp:14", "sr2:STCP", "blue", ["h96.05", "v-220.8", "h96"]],
+    ["sr2:VCC", "esp:5V", "red", ["v1.2", "h-19.2", "v211.2"]],
+    ["sr1:Q0", "relay1:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr1:Q1", "relay10:IN", "green", ["v105.6", "h9.6"]],
+    ["sr1:Q2", "relay11:IN", "green", ["v0"]],
+    ["sr1:Q3", "relay12:IN", "green", ["v0"]],
+    ["sr1:Q4", "relay13:IN", "green", ["v278.4", "h57.6"]],
+    ["sr1:Q5", "relay14:IN", "green", ["v0"]],
+    ["sr1:Q6", "relay15:IN", "green", ["v0"]],
+    ["sr1:Q7", "relay16:IN", "green", ["v0"]],
+    ["relay1:GND", "relay10:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay10:GND", "relay11:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay11:GND", "relay12:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay12:GND", "relay13:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay13:GND", "relay14:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay14:GND", "relay15:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay15:GND", "relay16:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay16:VCC", "relay15:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay15:VCC", "relay14:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay14:VCC", "relay13:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay13:VCC", "relay12:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay12:VCC", "relay11:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay11:VCC", "relay10:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay10:VCC", "relay1:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr1:VCC", "relay1:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr1:OE", "relay1:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr1:DS", "sr2:Q7S", "#8f4814", ["v-18", "h-201.6"]],
+    ["relay2:GND", "esp:GND.1", "black", ["h-115.2", "v95.6"]],
+    [
+      "relay16:GND",
+      "relay9:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-47.6"]
+    ],
+    ["relay9:VCC", "relay16:VCC", "red", ["h-19.2", "v48", "h249.6", "v-48"]],
+    ["sr2:MR", "sr2:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr1:VCC", "sr1:MR", "red", ["v10.8", "h57.6"]],
+    ["sr2:SHCP", "sr1:SHCP", "orange", ["v-27.6", "h249.6", "v9.6"]],
+    ["sr2:STCP", "sr1:STCP", "blue", ["v-37.2", "h19.2"]],
+    ["sr3:Q0", "relay17:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr3:Q1", "relay18:IN", "green", ["v105.6", "h9.6"]],
+    ["sr3:Q2", "relay19:IN", "green", ["v0"]],
+    ["sr3:Q3", "relay20:IN", "green", ["v0"]],
+    ["sr3:Q4", "relay21:IN", "green", ["v278.4", "h57.6"]],
+    ["sr3:Q5", "relay22:IN", "green", ["v0"]],
+    ["sr3:Q6", "relay23:IN", "green", ["v0"]],
+    ["sr3:Q7", "relay24:IN", "green", ["v0"]],
+    ["relay17:GND", "relay18:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay18:GND", "relay19:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay19:GND", "relay20:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay20:GND", "relay21:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay21:GND", "relay22:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay22:GND", "relay23:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay23:GND", "relay24:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay24:VCC", "relay23:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay23:VCC", "relay22:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay22:VCC", "relay21:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay21:VCC", "relay20:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay20:VCC", "relay19:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay19:VCC", "relay18:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay18:VCC", "relay17:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr3:VCC", "relay17:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr3:OE", "relay17:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr3:VCC", "sr3:MR", "red", ["v10.8", "h57.6"]],
+    ["relay24:VCC", "relay16:VCC", "red", ["h-19.2", "v48", "h-249.6", "v-48"]],
+    [
+      "relay24:GND",
+      "relay16:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr1:SHCP", "sr3:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr1:STCP", "sr3:STCP", "blue", ["v-37.2", "h249.6"]],
+    ["sr4:Q0", "relay25:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr4:Q1", "relay26:IN", "green", ["v105.6", "h9.6"]],
+    ["sr4:Q2", "relay27:IN", "green", ["v0"]],
+    ["sr4:Q3", "relay28:IN", "green", ["v0"]],
+    ["sr4:Q4", "relay29:IN", "green", ["v278.4", "h57.6"]],
+    ["sr4:Q5", "relay30:IN", "green", ["v0"]],
+    ["sr4:Q6", "relay31:IN", "green", ["v0"]],
+    ["sr4:Q7", "relay32:IN", "green", ["v0"]],
+    ["relay25:GND", "relay26:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay26:GND", "relay27:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay27:GND", "relay28:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay28:GND", "relay29:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay29:GND", "relay30:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay30:GND", "relay31:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay31:GND", "relay32:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay32:VCC", "relay31:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay31:VCC", "relay30:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay30:VCC", "relay29:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay29:VCC", "relay28:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay28:VCC", "relay27:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay27:VCC", "relay26:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay26:VCC", "relay25:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr4:VCC", "relay25:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr4:OE", "relay25:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr4:VCC", "sr4:MR", "red", ["v10.8", "h57.6"]],
+    ["relay32:VCC", "relay24:VCC", "red", ["h-19.2", "v48", "h-249.6", "v-48"]],
+    [
+      "relay32:GND",
+      "relay24:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr1:Q7S", "sr3:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr3:Q7S", "sr4:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr3:SHCP", "sr4:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr3:STCP", "sr4:STCP", "blue", ["v-37.2", "h240"]],
+    ["sr5:Q0", "relay33:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr5:Q1", "relay34:IN", "green", ["v105.6", "h9.6"]],
+    ["sr5:Q2", "relay35:IN", "green", ["v0"]],
+    ["sr5:Q3", "relay36:IN", "green", ["v0"]],
+    ["sr5:Q4", "relay37:IN", "green", ["v278.4", "h57.6"]],
+    ["sr5:Q5", "relay38:IN", "green", ["v0"]],
+    ["sr5:Q6", "relay39:IN", "green", ["v0"]],
+    ["sr5:Q7", "relay40:IN", "green", ["v0"]],
+    ["relay33:GND", "relay34:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay34:GND", "relay35:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay35:GND", "relay36:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay36:GND", "relay37:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay37:GND", "relay38:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay38:GND", "relay39:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay39:GND", "relay40:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay40:VCC", "relay39:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay39:VCC", "relay38:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay38:VCC", "relay37:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay37:VCC", "relay36:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay36:VCC", "relay35:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay35:VCC", "relay34:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay34:VCC", "relay33:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr5:VCC", "relay33:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr5:OE", "relay33:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr6:Q0", "relay41:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr6:Q1", "relay42:IN", "green", ["v105.6", "h9.6"]],
+    ["sr6:Q2", "relay43:IN", "green", ["v0"]],
+    ["sr6:Q3", "relay44:IN", "green", ["v0"]],
+    ["sr6:Q4", "relay45:IN", "green", ["v278.4", "h57.6"]],
+    ["sr6:Q5", "relay46:IN", "green", ["v0"]],
+    ["sr6:Q6", "relay47:IN", "green", ["v0"]],
+    ["sr6:Q7", "relay48:IN", "green", ["v0"]],
+    ["relay41:GND", "relay42:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay42:GND", "relay43:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay43:GND", "relay44:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay44:GND", "relay45:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay45:GND", "relay46:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay46:GND", "relay47:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay47:GND", "relay48:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay48:VCC", "relay47:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay47:VCC", "relay46:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay46:VCC", "relay45:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay45:VCC", "relay44:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay44:VCC", "relay43:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay43:VCC", "relay42:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay42:VCC", "relay41:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr6:VCC", "relay41:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr6:OE", "relay41:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr6:DS", "sr5:Q7S", "#8f4814", ["v-18", "h-201.6"]],
+    [
+      "relay48:GND",
+      "relay40:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-47.6"]
+    ],
+    ["relay40:VCC", "relay48:VCC", "red", ["h-19.2", "v48", "h249.6", "v-48"]],
+    ["sr5:MR", "sr5:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr6:VCC", "sr6:MR", "red", ["v10.8", "h57.6"]],
+    ["sr5:SHCP", "sr6:SHCP", "orange", ["v-27.6", "h249.6", "v9.6"]],
+    ["sr5:STCP", "sr6:STCP", "blue", ["v-37.2", "h19.2"]],
+    ["sr7:Q0", "relay49:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr7:Q1", "relay50:IN", "green", ["v105.6", "h9.6"]],
+    ["sr7:Q2", "relay51:IN", "green", ["v0"]],
+    ["sr7:Q3", "relay52:IN", "green", ["v0"]],
+    ["sr7:Q4", "relay53:IN", "green", ["v278.4", "h57.6"]],
+    ["sr7:Q5", "relay54:IN", "green", ["v0"]],
+    ["sr7:Q6", "relay55:IN", "green", ["v0"]],
+    ["sr7:Q7", "relay56:IN", "green", ["v0"]],
+    ["relay49:GND", "relay50:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay50:GND", "relay51:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay51:GND", "relay52:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay52:GND", "relay53:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay53:GND", "relay54:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay54:GND", "relay55:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay55:GND", "relay56:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay56:VCC", "relay55:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay55:VCC", "relay54:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay54:VCC", "relay53:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay53:VCC", "relay52:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay52:VCC", "relay51:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay51:VCC", "relay50:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay50:VCC", "relay49:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr7:VCC", "relay49:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr7:OE", "relay49:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr7:VCC", "sr7:MR", "red", ["v10.8", "h57.6"]],
+    ["relay56:VCC", "relay48:VCC", "red", ["h-19.2", "v48", "h-249.6", "v-48"]],
+    [
+      "relay56:GND",
+      "relay48:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr6:SHCP", "sr7:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr6:STCP", "sr7:STCP", "blue", ["v-37.2", "h249.6"]],
+    ["sr8:Q0", "relay57:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr8:Q1", "relay58:IN", "green", ["v105.6", "h9.6"]],
+    ["sr8:Q2", "relay59:IN", "green", ["v0"]],
+    ["sr8:Q3", "relay60:IN", "green", ["v0"]],
+    ["sr8:Q4", "relay61:IN", "green", ["v278.4", "h57.6"]],
+    ["sr8:Q5", "relay62:IN", "green", ["v0"]],
+    ["sr8:Q6", "relay63:IN", "green", ["v0"]],
+    ["sr8:Q7", "relay64:IN", "green", ["v0"]],
+    ["relay57:GND", "relay58:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay58:GND", "relay59:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay59:GND", "relay60:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay60:GND", "relay61:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay61:GND", "relay62:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay62:GND", "relay63:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay63:GND", "relay64:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay64:VCC", "relay63:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay63:VCC", "relay62:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay62:VCC", "relay61:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay61:VCC", "relay60:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay60:VCC", "relay59:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay59:VCC", "relay58:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay58:VCC", "relay57:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr8:VCC", "relay57:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr8:OE", "relay57:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr8:VCC", "sr8:MR", "red", ["v10.8", "h57.6"]],
+    ["relay64:VCC", "relay56:VCC", "red", ["h-19.2", "v48", "h-249.6", "v-48"]],
+    [
+      "relay64:GND",
+      "relay56:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr6:Q7S", "sr7:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr7:Q7S", "sr8:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr7:SHCP", "sr8:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr7:STCP", "sr8:STCP", "blue", ["v-37.2", "h240"]],
+    ["sr9:Q0", "relay65:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr9:Q1", "relay66:IN", "green", ["v105.6", "h9.6"]],
+    ["sr9:Q2", "relay67:IN", "green", ["v0"]],
+    ["sr9:Q3", "relay68:IN", "green", ["v0"]],
+    ["sr9:Q4", "relay69:IN", "green", ["v278.4", "h57.6"]],
+    ["sr9:Q5", "relay70:IN", "green", ["v0"]],
+    ["sr9:Q6", "relay71:IN", "green", ["v0"]],
+    ["sr9:Q7", "relay72:IN", "green", ["v0"]],
+    ["relay65:GND", "relay66:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay66:GND", "relay67:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay67:GND", "relay68:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay68:GND", "relay69:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay69:GND", "relay70:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay70:GND", "relay71:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay71:GND", "relay72:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay72:VCC", "relay71:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay71:VCC", "relay70:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay70:VCC", "relay69:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay69:VCC", "relay68:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay68:VCC", "relay67:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay67:VCC", "relay66:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay66:VCC", "relay65:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr9:VCC", "relay65:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr9:OE", "relay65:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr10:Q0", "relay73:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr10:Q1", "relay74:IN", "green", ["v105.6", "h9.6"]],
+    ["sr10:Q2", "relay75:IN", "green", ["v0"]],
+    ["sr10:Q3", "relay76:IN", "green", ["v0"]],
+    ["sr10:Q4", "relay77:IN", "green", ["v278.4", "h57.6"]],
+    ["sr10:Q5", "relay78:IN", "green", ["v0"]],
+    ["sr10:Q6", "relay79:IN", "green", ["v0"]],
+    ["sr10:Q7", "relay80:IN", "green", ["v0"]],
+    ["relay73:GND", "relay74:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay74:GND", "relay75:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay75:GND", "relay76:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay76:GND", "relay77:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay77:GND", "relay78:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay78:GND", "relay79:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay79:GND", "relay80:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay80:VCC", "relay79:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay79:VCC", "relay78:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay78:VCC", "relay77:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay77:VCC", "relay76:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay76:VCC", "relay75:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay75:VCC", "relay74:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay74:VCC", "relay73:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr10:VCC", "relay73:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr10:OE", "relay73:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr10:DS", "sr9:Q7S", "#8f4814", ["v-18", "h-201.6"]],
+    [
+      "relay80:GND",
+      "relay72:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-47.6"]
+    ],
+    ["relay72:VCC", "relay80:VCC", "red", ["h-19.2", "v48", "h249.6", "v-48"]],
+    ["sr9:MR", "sr9:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr10:VCC", "sr10:MR", "red", ["v10.8", "h57.6"]],
+    ["sr9:SHCP", "sr10:SHCP", "orange", ["v-27.6", "h249.6", "v9.6"]],
+    ["sr9:STCP", "sr10:STCP", "blue", ["v-37.2", "h19.2"]],
+    ["sr11:Q0", "relay81:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr11:Q1", "relay82:IN", "green", ["v105.6", "h9.6"]],
+    ["sr11:Q2", "relay83:IN", "green", ["v0"]],
+    ["sr11:Q3", "relay84:IN", "green", ["v0"]],
+    ["sr11:Q4", "relay85:IN", "green", ["v278.4", "h57.6"]],
+    ["sr11:Q5", "relay86:IN", "green", ["v0"]],
+    ["sr11:Q6", "relay87:IN", "green", ["v0"]],
+    ["sr11:Q7", "relay88:IN", "green", ["v0"]],
+    ["relay81:GND", "relay82:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay82:GND", "relay83:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay83:GND", "relay84:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay84:GND", "relay85:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay85:GND", "relay86:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay86:GND", "relay87:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay87:GND", "relay88:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay88:VCC", "relay87:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay87:VCC", "relay86:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay86:VCC", "relay85:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay85:VCC", "relay84:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay84:VCC", "relay83:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay83:VCC", "relay82:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay82:VCC", "relay81:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr11:VCC", "relay81:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr11:OE", "relay81:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr11:VCC", "sr11:MR", "red", ["v10.8", "h57.6"]],
+    ["relay88:VCC", "relay80:VCC", "red", ["h-19.2", "v48", "h-249.6", "v-48"]],
+    [
+      "relay88:GND",
+      "relay80:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr10:SHCP", "sr11:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr10:STCP", "sr11:STCP", "blue", ["v-37.2", "h249.6"]],
+    ["sr12:Q0", "relay89:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr12:Q1", "relay90:IN", "green", ["v105.6", "h9.6"]],
+    ["sr12:Q2", "relay91:IN", "green", ["v0"]],
+    ["sr12:Q3", "relay92:IN", "green", ["v0"]],
+    ["sr12:Q4", "relay93:IN", "green", ["v278.4", "h57.6"]],
+    ["sr12:Q5", "relay94:IN", "green", ["v0"]],
+    ["sr12:Q6", "relay95:IN", "green", ["v0"]],
+    ["sr12:Q7", "relay96:IN", "green", ["v0"]],
+    ["relay89:GND", "relay90:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay90:GND", "relay91:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay91:GND", "relay92:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay92:GND", "relay93:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay93:GND", "relay94:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay94:GND", "relay95:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay95:GND", "relay96:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay96:VCC", "relay95:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay95:VCC", "relay94:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay94:VCC", "relay93:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay93:VCC", "relay92:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay92:VCC", "relay91:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay91:VCC", "relay90:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay90:VCC", "relay89:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr12:VCC", "relay89:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr12:OE", "relay89:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr12:VCC", "sr12:MR", "red", ["v10.8", "h57.6"]],
+    ["relay96:VCC", "relay88:VCC", "red", ["h-19.2", "v48", "h-249.6", "v-48"]],
+    [
+      "relay96:GND",
+      "relay88:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr10:Q7S", "sr11:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr11:Q7S", "sr12:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr11:SHCP", "sr12:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr11:STCP", "sr12:STCP", "blue", ["v-37.2", "h240"]],
+    ["sr13:Q0", "relay97:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr13:Q1", "relay98:IN", "green", ["v105.6", "h9.6"]],
+    ["sr13:Q2", "relay99:IN", "green", ["v0"]],
+    ["sr13:Q3", "relay100:IN", "green", ["v0"]],
+    ["sr13:Q4", "relay101:IN", "green", ["v278.4", "h57.6"]],
+    ["sr13:Q5", "relay102:IN", "green", ["v0"]],
+    ["sr13:Q6", "relay103:IN", "green", ["v0"]],
+    ["sr13:Q7", "relay104:IN", "green", ["v0"]],
+    ["relay97:GND", "relay98:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay98:GND", "relay99:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay99:GND", "relay100:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay100:GND", "relay101:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay101:GND", "relay102:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay102:GND", "relay103:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay103:GND", "relay104:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay104:VCC", "relay103:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay103:VCC", "relay102:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay102:VCC", "relay101:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay101:VCC", "relay100:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay100:VCC", "relay99:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay99:VCC", "relay98:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay98:VCC", "relay97:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr13:VCC", "relay97:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr13:OE", "relay97:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr14:Q0", "relay105:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr14:Q1", "relay106:IN", "green", ["v105.6", "h9.6"]],
+    ["sr14:Q2", "relay107:IN", "green", ["v0"]],
+    ["sr14:Q3", "relay108:IN", "green", ["v0"]],
+    ["sr14:Q4", "relay109:IN", "green", ["v278.4", "h57.6"]],
+    ["sr14:Q5", "relay110:IN", "green", ["v0"]],
+    ["sr14:Q6", "relay111:IN", "green", ["v0"]],
+    ["sr14:Q7", "relay112:IN", "green", ["v0"]],
+    ["relay105:GND", "relay106:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay106:GND", "relay107:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay107:GND", "relay108:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay108:GND", "relay109:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay109:GND", "relay110:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay110:GND", "relay111:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay111:GND", "relay112:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay112:VCC", "relay111:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay111:VCC", "relay110:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay110:VCC", "relay109:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay109:VCC", "relay108:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay108:VCC", "relay107:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay107:VCC", "relay106:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay106:VCC", "relay105:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr14:VCC", "relay105:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr14:OE", "relay105:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr14:DS", "sr13:Q7S", "#8f4814", ["v-18", "h-201.6"]],
+    [
+      "relay112:GND",
+      "relay104:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-47.6"]
+    ],
+    [
+      "relay104:VCC",
+      "relay112:VCC",
+      "red",
+      ["h-19.2", "v48", "h249.6", "v-48"]
+    ],
+    ["sr13:MR", "sr13:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr14:VCC", "sr14:MR", "red", ["v10.8", "h57.6"]],
+    ["sr13:SHCP", "sr14:SHCP", "orange", ["v-27.6", "h249.6", "v9.6"]],
+    ["sr13:STCP", "sr14:STCP", "blue", ["v-37.2", "h19.2"]],
+    ["sr15:Q0", "relay113:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr15:Q1", "relay114:IN", "green", ["v105.6", "h9.6"]],
+    ["sr15:Q2", "relay115:IN", "green", ["v0"]],
+    ["sr15:Q3", "relay116:IN", "green", ["v0"]],
+    ["sr15:Q4", "relay117:IN", "green", ["v278.4", "h57.6"]],
+    ["sr15:Q5", "relay118:IN", "green", ["v0"]],
+    ["sr15:Q6", "relay119:IN", "green", ["v0"]],
+    ["sr15:Q7", "relay120:IN", "green", ["v0"]],
+    ["relay113:GND", "relay114:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay114:GND", "relay115:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay115:GND", "relay116:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay116:GND", "relay117:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay117:GND", "relay118:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay118:GND", "relay119:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay119:GND", "relay120:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay120:VCC", "relay119:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay119:VCC", "relay118:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay118:VCC", "relay117:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay117:VCC", "relay116:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay116:VCC", "relay115:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay115:VCC", "relay114:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay114:VCC", "relay113:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr15:VCC", "relay113:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr15:OE", "relay113:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr15:VCC", "sr15:MR", "red", ["v10.8", "h57.6"]],
+    [
+      "relay120:VCC",
+      "relay112:VCC",
+      "red",
+      ["h-19.2", "v48", "h-249.6", "v-48"]
+    ],
+    [
+      "relay120:GND",
+      "relay112:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr14:SHCP", "sr15:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr14:STCP", "sr15:STCP", "blue", ["v-37.2", "h249.6"]],
+    ["sr16:Q0", "relay121:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr16:Q1", "relay122:IN", "green", ["v105.6", "h9.6"]],
+    ["sr16:Q2", "relay123:IN", "green", ["v0"]],
+    ["sr16:Q3", "relay124:IN", "green", ["v0"]],
+    ["sr16:Q4", "relay125:IN", "green", ["v278.4", "h57.6"]],
+    ["sr16:Q5", "relay126:IN", "green", ["v0"]],
+    ["sr16:Q6", "relay127:IN", "green", ["v0"]],
+    ["sr16:Q7", "relay128:IN", "green", ["v0"]],
+    ["relay121:GND", "relay122:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay122:GND", "relay123:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay123:GND", "relay124:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay124:GND", "relay125:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay125:GND", "relay126:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay126:GND", "relay127:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay127:GND", "relay128:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay128:VCC", "relay127:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay127:VCC", "relay126:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay126:VCC", "relay125:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay125:VCC", "relay124:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay124:VCC", "relay123:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay123:VCC", "relay122:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay122:VCC", "relay121:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr16:VCC", "relay121:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr16:OE", "relay121:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr16:VCC", "sr16:MR", "red", ["v10.8", "h57.6"]],
+    [
+      "relay128:VCC",
+      "relay120:VCC",
+      "red",
+      ["h-19.2", "v48", "h-249.6", "v-48"]
+    ],
+    [
+      "relay128:GND",
+      "relay120:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr14:Q7S", "sr15:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr15:Q7S", "sr16:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr15:SHCP", "sr16:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr15:STCP", "sr16:STCP", "blue", ["v-37.2", "h240"]],
+    ["sr17:Q0", "relay129:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr17:Q1", "relay130:IN", "green", ["v105.6", "h9.6"]],
+    ["sr17:Q2", "relay131:IN", "green", ["v0"]],
+    ["sr17:Q3", "relay132:IN", "green", ["v0"]],
+    ["sr17:Q4", "relay133:IN", "green", ["v278.4", "h57.6"]],
+    ["sr17:Q5", "relay134:IN", "green", ["v0"]],
+    ["sr17:Q6", "relay135:IN", "green", ["v0"]],
+    ["sr17:Q7", "relay136:IN", "green", ["v0"]],
+    ["relay129:GND", "relay130:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay130:GND", "relay131:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay131:GND", "relay132:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay132:GND", "relay133:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay133:GND", "relay134:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay134:GND", "relay135:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay135:GND", "relay136:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay136:VCC", "relay135:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay135:VCC", "relay134:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay134:VCC", "relay133:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay133:VCC", "relay132:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay132:VCC", "relay131:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay131:VCC", "relay130:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay130:VCC", "relay129:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr17:VCC", "relay129:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr17:OE", "relay129:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr18:Q0", "relay137:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr18:Q1", "relay138:IN", "green", ["v105.6", "h9.6"]],
+    ["sr18:Q2", "relay139:IN", "green", ["v0"]],
+    ["sr18:Q3", "relay140:IN", "green", ["v0"]],
+    ["sr18:Q4", "relay141:IN", "green", ["v278.4", "h57.6"]],
+    ["sr18:Q5", "relay142:IN", "green", ["v0"]],
+    ["sr18:Q6", "relay143:IN", "green", ["v0"]],
+    ["sr18:Q7", "relay144:IN", "green", ["v0"]],
+    ["relay137:GND", "relay138:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay138:GND", "relay139:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay139:GND", "relay140:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay140:GND", "relay141:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay141:GND", "relay142:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay142:GND", "relay143:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay143:GND", "relay144:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay144:VCC", "relay143:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay143:VCC", "relay142:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay142:VCC", "relay141:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay141:VCC", "relay140:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay140:VCC", "relay139:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay139:VCC", "relay138:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay138:VCC", "relay137:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr18:VCC", "relay137:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr18:OE", "relay137:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr18:DS", "sr17:Q7S", "#8f4814", ["v-18", "h-201.6"]],
+    [
+      "relay144:GND",
+      "relay136:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-47.6"]
+    ],
+    [
+      "relay136:VCC",
+      "relay144:VCC",
+      "red",
+      ["h-19.2", "v48", "h249.6", "v-48"]
+    ],
+    ["sr17:MR", "sr17:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr18:VCC", "sr18:MR", "red", ["v10.8", "h57.6"]],
+    ["sr17:SHCP", "sr18:SHCP", "orange", ["v-27.6", "h249.6", "v9.6"]],
+    ["sr17:STCP", "sr18:STCP", "blue", ["v-37.2", "h19.2"]],
+    ["sr19:Q0", "relay145:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr19:Q1", "relay146:IN", "green", ["v105.6", "h9.6"]],
+    ["sr19:Q2", "relay147:IN", "green", ["v0"]],
+    ["sr19:Q3", "relay148:IN", "green", ["v0"]],
+    ["sr19:Q4", "relay149:IN", "green", ["v278.4", "h57.6"]],
+    ["sr19:Q5", "relay150:IN", "green", ["v0"]],
+    ["sr19:Q6", "relay151:IN", "green", ["v0"]],
+    ["sr19:Q7", "relay152:IN", "green", ["v0"]],
+    ["relay145:GND", "relay146:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay146:GND", "relay147:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay147:GND", "relay148:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay148:GND", "relay149:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay149:GND", "relay150:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay150:GND", "relay151:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay151:GND", "relay152:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay152:VCC", "relay151:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay151:VCC", "relay150:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay150:VCC", "relay149:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay149:VCC", "relay148:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay148:VCC", "relay147:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay147:VCC", "relay146:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay146:VCC", "relay145:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr19:VCC", "relay145:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr19:OE", "relay145:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr19:VCC", "sr19:MR", "red", ["v10.8", "h57.6"]],
+    [
+      "relay152:VCC",
+      "relay144:VCC",
+      "red",
+      ["h-19.2", "v48", "h-249.6", "v-48"]
+    ],
+    [
+      "relay152:GND",
+      "relay144:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr18:SHCP", "sr19:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr18:STCP", "sr19:STCP", "blue", ["v-37.2", "h249.6"]],
+    ["sr20:Q0", "relay153:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr20:Q1", "relay154:IN", "green", ["v105.6", "h9.6"]],
+    ["sr20:Q2", "relay155:IN", "green", ["v0"]],
+    ["sr20:Q3", "relay156:IN", "green", ["v0"]],
+    ["sr20:Q4", "relay157:IN", "green", ["v278.4", "h57.6"]],
+    ["sr20:Q5", "relay158:IN", "green", ["v0"]],
+    ["sr20:Q6", "relay159:IN", "green", ["v0"]],
+    ["sr20:Q7", "relay160:IN", "green", ["v0"]],
+    ["relay153:GND", "relay154:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay154:GND", "relay155:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay155:GND", "relay156:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay156:GND", "relay157:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay157:GND", "relay158:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay158:GND", "relay159:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay159:GND", "relay160:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay160:VCC", "relay159:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay159:VCC", "relay158:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay158:VCC", "relay157:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay157:VCC", "relay156:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay156:VCC", "relay155:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay155:VCC", "relay154:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay154:VCC", "relay153:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr20:VCC", "relay153:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr20:OE", "relay153:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr20:VCC", "sr20:MR", "red", ["v10.8", "h57.6"]],
+    [
+      "relay160:VCC",
+      "relay152:VCC",
+      "red",
+      ["h-19.2", "v48", "h-249.6", "v-48"]
+    ],
+    [
+      "relay160:GND",
+      "relay152:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr18:Q7S", "sr19:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr19:Q7S", "sr20:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr19:SHCP", "sr20:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr19:STCP", "sr20:STCP", "blue", ["v-37.2", "h240"]],
+    ["sr21:Q0", "relay161:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr21:Q1", "relay162:IN", "green", ["v105.6", "h9.6"]],
+    ["sr21:Q2", "relay163:IN", "green", ["v0"]],
+    ["sr21:Q3", "relay164:IN", "green", ["v0"]],
+    ["sr21:Q4", "relay165:IN", "green", ["v278.4", "h57.6"]],
+    ["sr21:Q5", "relay166:IN", "green", ["v0"]],
+    ["sr21:Q6", "relay167:IN", "green", ["v0"]],
+    ["sr21:Q7", "relay168:IN", "green", ["v0"]],
+    ["relay161:GND", "relay162:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay162:GND", "relay163:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay163:GND", "relay164:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay164:GND", "relay165:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay165:GND", "relay166:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay166:GND", "relay167:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay167:GND", "relay168:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay168:VCC", "relay167:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay167:VCC", "relay166:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay166:VCC", "relay165:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay165:VCC", "relay164:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay164:VCC", "relay163:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay163:VCC", "relay162:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay162:VCC", "relay161:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr21:VCC", "relay161:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr21:OE", "relay161:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr22:Q0", "relay169:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr22:Q1", "relay170:IN", "green", ["v105.6", "h9.6"]],
+    ["sr22:Q2", "relay171:IN", "green", ["v0"]],
+    ["sr22:Q3", "relay172:IN", "green", ["v0"]],
+    ["sr22:Q4", "relay173:IN", "green", ["v278.4", "h57.6"]],
+    ["sr22:Q5", "relay174:IN", "green", ["v0"]],
+    ["sr22:Q6", "relay175:IN", "green", ["v0"]],
+    ["sr22:Q7", "relay176:IN", "green", ["v0"]],
+    ["relay169:GND", "relay170:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay170:GND", "relay171:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay171:GND", "relay172:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay172:GND", "relay173:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay173:GND", "relay174:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay174:GND", "relay175:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay175:GND", "relay176:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay176:VCC", "relay175:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay175:VCC", "relay174:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay174:VCC", "relay173:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay173:VCC", "relay172:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay172:VCC", "relay171:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay171:VCC", "relay170:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay170:VCC", "relay169:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr22:VCC", "relay169:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr22:OE", "relay169:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr22:DS", "sr21:Q7S", "#8f4814", ["v-18", "h-201.6"]],
+    [
+      "relay176:GND",
+      "relay168:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-47.6"]
+    ],
+    [
+      "relay168:VCC",
+      "relay176:VCC",
+      "red",
+      ["h-19.2", "v48", "h249.6", "v-48"]
+    ],
+    ["sr21:MR", "sr21:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr22:VCC", "sr22:MR", "red", ["v10.8", "h57.6"]],
+    ["sr21:SHCP", "sr22:SHCP", "orange", ["v-27.6", "h249.6", "v9.6"]],
+    ["sr21:STCP", "sr22:STCP", "blue", ["v-37.2", "h19.2"]],
+    ["sr23:Q0", "relay177:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr23:Q1", "relay178:IN", "green", ["v105.6", "h9.6"]],
+    ["sr23:Q2", "relay179:IN", "green", ["v0"]],
+    ["sr23:Q3", "relay180:IN", "green", ["v0"]],
+    ["sr23:Q4", "relay181:IN", "green", ["v278.4", "h57.6"]],
+    ["sr23:Q5", "relay182:IN", "green", ["v0"]],
+    ["sr23:Q6", "relay183:IN", "green", ["v0"]],
+    ["sr23:Q7", "relay184:IN", "green", ["v0"]],
+    ["relay177:GND", "relay178:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay178:GND", "relay179:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay179:GND", "relay180:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay180:GND", "relay181:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay181:GND", "relay182:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay182:GND", "relay183:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay183:GND", "relay184:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay184:VCC", "relay183:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay183:VCC", "relay182:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay182:VCC", "relay181:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay181:VCC", "relay180:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay180:VCC", "relay179:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay179:VCC", "relay178:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay178:VCC", "relay177:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr23:VCC", "relay177:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr23:OE", "relay177:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr23:VCC", "sr23:MR", "red", ["v10.8", "h57.6"]],
+    [
+      "relay184:VCC",
+      "relay176:VCC",
+      "red",
+      ["h-19.2", "v48", "h-249.6", "v-48"]
+    ],
+    [
+      "relay184:GND",
+      "relay176:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr22:SHCP", "sr23:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr22:STCP", "sr23:STCP", "blue", ["v-37.2", "h249.6"]],
+    ["sr24:Q0", "relay185:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr24:Q1", "relay186:IN", "green", ["v105.6", "h9.6"]],
+    ["sr24:Q2", "relay187:IN", "green", ["v0"]],
+    ["sr24:Q3", "relay188:IN", "green", ["v0"]],
+    ["sr24:Q4", "relay189:IN", "green", ["v278.4", "h57.6"]],
+    ["sr24:Q5", "relay190:IN", "green", ["v0"]],
+    ["sr24:Q6", "relay191:IN", "green", ["v0"]],
+    ["sr24:Q7", "relay192:IN", "green", ["v0"]],
+    ["relay185:GND", "relay186:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay186:GND", "relay187:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay187:GND", "relay188:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay188:GND", "relay189:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay189:GND", "relay190:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay190:GND", "relay191:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay191:GND", "relay192:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay192:VCC", "relay191:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay191:VCC", "relay190:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay190:VCC", "relay189:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay189:VCC", "relay188:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay188:VCC", "relay187:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay187:VCC", "relay186:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay186:VCC", "relay185:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr24:VCC", "relay185:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr24:OE", "relay185:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr24:VCC", "sr24:MR", "red", ["v10.8", "h57.6"]],
+    [
+      "relay192:VCC",
+      "relay184:VCC",
+      "red",
+      ["h-19.2", "v48", "h-249.6", "v-48"]
+    ],
+    [
+      "relay192:GND",
+      "relay184:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr22:Q7S", "sr23:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr23:Q7S", "sr24:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr23:SHCP", "sr24:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr23:STCP", "sr24:STCP", "blue", ["v-37.2", "h240"]],
+    ["sr25:Q0", "relay193:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr25:Q1", "relay194:IN", "green", ["v105.6", "h9.6"]],
+    ["sr25:Q2", "relay195:IN", "green", ["v0"]],
+    ["sr25:Q3", "relay196:IN", "green", ["v0"]],
+    ["sr25:Q4", "relay197:IN", "green", ["v278.4", "h57.6"]],
+    ["sr25:Q5", "relay198:IN", "green", ["v0"]],
+    ["sr25:Q6", "relay199:IN", "green", ["v0"]],
+    ["sr25:Q7", "relay200:IN", "green", ["v0"]],
+    ["relay193:GND", "relay194:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay194:GND", "relay195:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay195:GND", "relay196:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay196:GND", "relay197:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay197:GND", "relay198:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay198:GND", "relay199:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay199:GND", "relay200:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay200:VCC", "relay199:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay199:VCC", "relay198:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay198:VCC", "relay197:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay197:VCC", "relay196:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay196:VCC", "relay195:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay195:VCC", "relay194:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay194:VCC", "relay193:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr25:VCC", "relay193:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr25:OE", "relay193:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr26:Q0", "relay201:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr26:Q1", "relay202:IN", "green", ["v105.6", "h9.6"]],
+    ["sr26:Q2", "relay203:IN", "green", ["v0"]],
+    ["sr26:Q3", "relay204:IN", "green", ["v0"]],
+    ["sr26:Q4", "relay205:IN", "green", ["v278.4", "h57.6"]],
+    ["sr26:Q5", "relay206:IN", "green", ["v0"]],
+    ["sr26:Q6", "relay207:IN", "green", ["v0"]],
+    ["sr26:Q7", "relay208:IN", "green", ["v0"]],
+    ["relay201:GND", "relay202:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay202:GND", "relay203:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay203:GND", "relay204:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay204:GND", "relay205:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay205:GND", "relay206:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay206:GND", "relay207:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay207:GND", "relay208:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay208:VCC", "relay207:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay207:VCC", "relay206:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay206:VCC", "relay205:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay205:VCC", "relay204:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay204:VCC", "relay203:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay203:VCC", "relay202:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay202:VCC", "relay201:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr26:VCC", "relay201:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr26:OE", "relay201:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr26:DS", "sr25:Q7S", "#8f4814", ["v-18", "h-201.6"]],
+    [
+      "relay208:GND",
+      "relay200:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-47.6"]
+    ],
+    [
+      "relay200:VCC",
+      "relay208:VCC",
+      "red",
+      ["h-19.2", "v48", "h249.6", "v-48"]
+    ],
+    ["sr25:MR", "sr25:VCC", "red", ["v10.8", "h-57.6"]],
+    ["sr26:VCC", "sr26:MR", "red", ["v10.8", "h57.6"]],
+    ["sr25:SHCP", "sr26:SHCP", "orange", ["v-27.6", "h249.6", "v9.6"]],
+    ["sr25:STCP", "sr26:STCP", "blue", ["v-37.2", "h19.2"]],
+    ["sr27:Q0", "relay209:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr27:Q1", "relay210:IN", "green", ["v105.6", "h9.6"]],
+    ["sr27:Q2", "relay211:IN", "green", ["v0"]],
+    ["sr27:Q3", "relay212:IN", "green", ["v0"]],
+    ["sr27:Q4", "relay213:IN", "green", ["v278.4", "h57.6"]],
+    ["sr27:Q5", "relay214:IN", "green", ["v0"]],
+    ["sr27:Q6", "relay215:IN", "green", ["v0"]],
+    ["sr27:Q7", "relay216:IN", "green", ["v0"]],
+    ["relay209:GND", "relay210:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay210:GND", "relay211:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay211:GND", "relay212:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay212:GND", "relay213:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay213:GND", "relay214:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay214:GND", "relay215:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay215:GND", "relay216:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay216:VCC", "relay215:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay215:VCC", "relay214:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay214:VCC", "relay213:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay213:VCC", "relay212:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay212:VCC", "relay211:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay211:VCC", "relay210:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay210:VCC", "relay209:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr27:VCC", "relay209:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr27:OE", "relay209:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr27:VCC", "sr27:MR", "red", ["v10.8", "h57.6"]],
+    [
+      "relay216:VCC",
+      "relay208:VCC",
+      "red",
+      ["h-19.2", "v48", "h-249.6", "v-48"]
+    ],
+    [
+      "relay216:GND",
+      "relay208:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr26:SHCP", "sr27:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr26:STCP", "sr27:STCP", "blue", ["v-37.2", "h249.6"]],
+    ["sr28:Q0", "relay217:IN", "green", ["v-8.4", "h-19.2", "v86.6"]],
+    ["sr28:Q1", "relay218:IN", "green", ["v105.6", "h9.6"]],
+    ["sr28:Q2", "relay219:IN", "green", ["v0"]],
+    ["sr28:Q3", "relay220:IN", "green", ["v0"]],
+    ["sr28:Q4", "relay221:IN", "green", ["v278.4", "h57.6"]],
+    ["sr28:Q5", "relay222:IN", "green", ["v0"]],
+    ["sr28:Q6", "relay223:IN", "green", ["v0"]],
+    ["sr28:Q7", "relay224:IN", "green", ["v0"]],
+    ["relay217:GND", "relay218:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay218:GND", "relay219:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay219:GND", "relay220:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay220:GND", "relay221:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay221:GND", "relay222:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay222:GND", "relay223:GND", "black", ["h-9.6", "v47.6"]],
+    ["relay223:GND", "relay224:GND", "black", ["h-9.6", "v57.2"]],
+    ["relay224:VCC", "relay223:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay223:VCC", "relay222:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay222:VCC", "relay221:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay221:VCC", "relay220:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay220:VCC", "relay219:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay219:VCC", "relay218:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["relay218:VCC", "relay217:VCC", "red", ["h-19.2", "v-57.6"]],
+    ["sr28:VCC", "relay217:VCC", "red", ["v1.2", "h-19.2", "v57.6"]],
+    ["sr28:OE", "relay217:GND", "black", ["v-8.4", "h48", "v77.2"]],
+    ["sr28:VCC", "sr28:MR", "red", ["v10.8", "h57.6"]],
+    [
+      "relay224:VCC",
+      "relay216:VCC",
+      "red",
+      ["h-19.2", "v48", "h-249.6", "v-48"]
+    ],
+    [
+      "relay224:GND",
+      "relay216:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["sr26:Q7S", "sr27:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr27:Q7S", "sr28:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr27:SHCP", "sr28:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr27:STCP", "sr28:STCP", "blue", ["v-37.2", "h240"]],
+    ["sr4:Q7S", "sr5:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr4:SHCP", "sr5:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr4:STCP", "sr5:STCP", "blue", ["v-37.2", "h9.6"]],
+    ["sr8:Q7S", "sr9:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr8:SHCP", "sr9:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr8:STCP", "sr9:STCP", "blue", ["v-37.2", "h9.6"]],
+    ["sr12:Q7S", "sr13:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr12:SHCP", "sr13:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr12:STCP", "sr13:STCP", "blue", ["v-37.2", "h249.6"]],
+    ["relay40:VCC", "relay32:VCC", "red", ["h-19.2", "v48", "h-249.6", "v-48"]],
+    [
+      "relay40:GND",
+      "relay32:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["relay72:VCC", "relay64:VCC", "red", ["h-19.2", "v48", "h-249.6", "v-48"]],
+    [
+      "relay72:GND",
+      "relay64:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    [
+      "relay104:VCC",
+      "relay96:VCC",
+      "red",
+      ["h-19.2", "v48", "h-249.6", "v-48"]
+    ],
+    [
+      "relay104:GND",
+      "relay96:GND",
+      "black",
+      ["h-9.6", "v47.6", "h-249.6", "v-48"]
+    ],
+    ["esp:GND.1", "relay129:GND", "black", ["h124.85", "v499.6"]],
+    ["relay129:VCC", "esp:5V", "red", ["h-105.6", "v-480"]],
+    [
+      "relay168:VCC",
+      "relay160:VCC",
+      "red",
+      ["h-19.2", "v48", "h-249.6", "v-48"]
+    ],
+    [
+      "relay160:GND",
+      "relay168:GND",
+      "black",
+      ["h-9.6", "v47.6", "h249.6", "v-48"]
+    ],
+    [
+      "relay192:VCC",
+      "relay200:VCC",
+      "red",
+      ["h-19.2", "v48", "h249.6", "v-48"]
+    ],
+    [
+      "relay192:GND",
+      "relay200:GND",
+      "black",
+      ["h-9.6", "v47.6", "h249.6", "v-48"]
+    ],
+    ["sr24:Q7S", "sr25:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr24:SHCP", "sr25:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr24:STCP", "sr25:STCP", "blue", ["v-37.2", "h249.6"]],
+    ["sr20:Q7S", "sr21:DS", "#8f4814", ["h0", "v-18", "h201.6"]],
+    ["sr20:SHCP", "sr21:SHCP", "orange", ["v-27.6", "h249.6"]],
+    ["sr20:STCP", "sr21:STCP", "blue", ["v-37.2", "h249.6"]],
+    [
+      "sr17:DS",
+      "sr16:Q7S",
+      "gray",
+      ["v-46.8", "h3955.2", "v-566.4", "h-163.2"]
+    ],
+    ["esp:13", "sr17:SHCP", "orange", ["h105.65", "v374.4", "h96"]],
+    ["esp:14", "sr17:STCP", "blue", ["h96.05", "v374.4", "h96"]],
+    ["esp:8", "oled1:SDA", "green", ["h19.25", "v-153.6", "h-182.4"]],
+    ["esp:9", "oled1:SCL", "green", ["h28.85", "v-134.4", "h-19.2"]],
+    [
+      "esp:3V3.1",
+      "oled1:VCC",
+      "red",
+      ["h9.65", "v38.4", "h-144", "v-201.6", "h-67.35"]
+    ],
+    ["esp:GND.4", "oled1:GND", "black", ["h-124.8", "v9.6"]],
+    ["keypad1:R4", "esp:7", "green", ["v19.2", "h143.8", "v-499.2"]],
+    ["keypad1:R3", "esp:6", "green", ["v28.8", "h162.9", "v-499.2"]],
+    ["esp:5", "keypad1:R2", "green", ["h38.45", "v499.2", "h-182"]],
+    ["keypad1:R1", "esp:4", "green", ["v48", "h201.6", "v-499.2"]],
+    ["keypad1:C1", "esp:15", "green", ["v57.6", "h172.7", "v-38.4"]],
+    ["esp:16", "keypad1:C2", "green", ["h67.25", "v566.4", "h-9.6"]],
+    [
+      "keypad1:C3",
+      "esp:17",
+      "green",
+      ["v76.8", "h172.65", "v-480", "h0", "v-9.6"]
+    ],
+    ["esp:18", "keypad1:C4", "green", ["h86.45", "v604.8", "h-172.5"]]
+  ],
+  "dependencies": {}
+}

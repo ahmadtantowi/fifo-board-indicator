@@ -169,4 +169,19 @@ pio lib install <LIBNAME>
 
 ---
 
+## Wokwi Simulation (wokwi/diagram.json)
+
+This project contains a Wokwi diagram file at `wokwi/diagram.json` plus a detailed guide at `wokwi/README.md`. Important: the `diagram.json` in this repository describes the simulated hardware wiring and components only — it does NOT include the firmware/sketch by default.
+
+How to use the diagram and run code:
+1. Open https://wokwi.com in your browser and open the Wokwi editor.
+2. Import the diagram (drag-and-drop `wokwi/diagram.json`, use the editor's Import menu, or paste the JSON).
+3. After the diagram loads, you must add the firmware/sketch in Wokwi's Code or Files panel (paste your `.ino` / `.cpp` source or create a new sketch file). See `wokwi/README.md` for step-by-step instructions.
+4. Click Run to compile and start the simulation. Open the Serial Monitor to view serial output and use the on-screen controls to interact with simulated inputs (keypad, switches, etc.).
+
+Notes:
+- Because the repository `diagram.json` does not contain the sketch, you need to paste or create the sketch inside Wokwi before running the simulation.
+- The Wokwi simulation is useful for quick prototyping and visualization but may differ from real hardware. Always verify behavior on physical hardware.
+- If Wokwi reports missing libraries or unsupported components, consult `wokwi/README.md` for troubleshooting and possible substitutions.
+
 If you get a specific `pio run` error message, paste the exact output here (or at least the last ~40 lines) and I will help you resolve it step-by-step.
