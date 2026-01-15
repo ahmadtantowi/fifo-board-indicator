@@ -13,6 +13,7 @@
 #define DATA_PIN  12
 #define CLOCK_PIN 13
 #define LATCH_PIN 14
+#define OE_PIN    11
 #define NUM_SHIFT_REGISTERS 28
 #define NUM_LEDS (NUM_SHIFT_REGISTERS * 8)
 
@@ -49,6 +50,7 @@ void handleKeypress(char key);
 void setAllRelays(bool state);
 void runSequence();
 void flashAllRelays();
+void sweepShiftRegisters();
 void toggleRelay(int relayId);
 void setRelay(int ledId, bool state);
 void updateShiftRegisters();
@@ -62,6 +64,8 @@ void setup() {
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
   pinMode(DATA_PIN, OUTPUT);
+  pinMode(OE_PIN, OUTPUT);
+  digitalWrite(OE_PIN, HIGH); // Disable outputs at startup
 
   // Clear all LEDs initially
   setAllRelays(false);
@@ -77,6 +81,11 @@ void setup() {
 
   // Show Startup Screen
   updateDisplay("Ready", "Type ID#");
+
+  // Enable outputs after startup init completes
+  digitalWrite(OE_PIN, LOW);
+
+  sweepShiftRegisters(); // Run a register sweep once after flash
 }
 
 void loop() {
@@ -177,6 +186,21 @@ void flashAllRelays() {
     delay(200);
   }
   updateDisplay("Done", "Ready");
+}
+
+void sweepShiftRegisters() {
+  setAllRelays(false);
+  for (int bit = 0; bit < 8; bit++) {
+    for (int reg = 0; reg < NUM_SHIFT_REGISTERS; reg++) {
+      relayStates[reg] |= (1 << bit);
+    }
+    updateShiftRegisters();
+    delay(75);
+    for (int reg = 0; reg < NUM_SHIFT_REGISTERS; reg++) {
+      relayStates[reg] &= ~(1 << bit);
+    }
+  }
+  updateShiftRegisters();
 }
 
 // --- Logic: Relay Control ---
