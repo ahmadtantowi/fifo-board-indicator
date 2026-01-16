@@ -1,3 +1,5 @@
+.DS_Store
+
 .cache
 .pio
 compile_commands.json
