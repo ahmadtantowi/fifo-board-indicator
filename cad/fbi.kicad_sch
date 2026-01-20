@@ -2517,7 +2517,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2535,7 +2535,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2553,7 +2553,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2571,7 +2571,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -10584,6 +10584,80 @@
 		)
 	)
 	(symbol
+		(lib_id "mp1584:MP1584_Module")
+		(at 160.02 254 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "54671706-ca29-48fa-a7ee-9ef9d6f39243")
+		(property "Reference" "U2"
+			(at 160.02 245.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MP1584"
+			(at 160.02 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "mp1584:MP1584-Module_B22.1x16.8mm"
+			(at 160.02 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9d1b5dc5-0cfb-4cd0-baab-7c953c1ed7b6")
+		)
+		(pin "1"
+			(uuid "d7a976ad-d10a-4dd5-9800-dd871956579e")
+		)
+		(pin "4"
+			(uuid "aaa3042d-558a-4a0e-b21b-a6e9f5f92685")
+		)
+		(pin "3"
+			(uuid "c83857ce-5cb9-435b-aa82-1e2c01aeb575")
+		)
+		(instances
+			(project ""
+				(path "/8a94cea8-93b7-482c-bb6b-daa13c735e50"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 344.17 128.27 0)
 		(unit 1)
@@ -16240,80 +16314,6 @@
 			(project "fbi"
 				(path "/8a94cea8-93b7-482c-bb6b-daa13c735e50"
 					(reference "J11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "mp1584:MP1584_Module")
-		(at 160.02 254 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bfdec76d-c78c-4281-b29d-ed76531eec46")
-		(property "Reference" "U2"
-			(at 160.02 245.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MP1584"
-			(at 160.02 247.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "mp1584:MP1584-Module_B22.1x16.8mm"
-			(at 160.02 254 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 254 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 160.02 254 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "186d3ae2-78c6-4488-9ede-d085fb938505")
-		)
-		(pin "1"
-			(uuid "23115e43-9816-40a5-b3eb-e5171f9c4611")
-		)
-		(pin "3"
-			(uuid "485c0a93-25eb-4a3a-94d7-5ff34eb5a943")
-		)
-		(pin "2"
-			(uuid "1ff2dc0a-e4e9-466b-83ef-216433ef71e8")
-		)
-		(instances
-			(project ""
-				(path "/8a94cea8-93b7-482c-bb6b-daa13c735e50"
-					(reference "U2")
 					(unit 1)
 				)
 			)
