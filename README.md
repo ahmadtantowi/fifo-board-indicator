@@ -4,7 +4,17 @@ A FIFO box indicator board utilizing LED lamps to visually guide users on the or
 
 ![Diagram](assets/diagram.png)
 
-# PlatformIO Setup
+## Wokwi Simulation (wokwi/diagram.json)
+
+This project contains a Wokwi diagram file at `wokwi/diagram.json` plus a detailed guide at `wokwi/README.md`. Important: the `diagram.json` in this repository describes the simulated hardware wiring and components only — it does NOT include the firmware/sketch by default.
+
+Visit [the Wokwi project](https://wokwi.com/projects/449662087423426561) to see the simulation in action.
+
+Below is a screenshot of the Wokwi editor showing the loaded diagram.
+
+![Wokwi diagram screenshot](assets/wokwi_diagram.png)
+
+# Development Environment Setup
 
 This guide explains how to set up and build the project using PlatformIO CLI and how to generate a `compile_commands.json` (compiledb) file so your editor's C/C++ language server (clangd / IntelliSense) can find Arduino and library headers (e.g. `Wire.h`, `Adafruit_GFX.h`, etc.).
 
@@ -19,22 +29,7 @@ This repository target platform: `esp32-s3-devkitc-1` with `framework = arduino`
 
 ## 1) Install PlatformIO CLI
 
-Recommended using pip.
-
-```/dev/null/commands.sh#L1-8
-# Install (user-wide)
-python3 -m pip install -U platformio
-
-# or (if you prefer)
-pip install -U platformio
-
-# Verify installation
-pio --version
-```
-
-Notes:
-- If `pio` is not found after installation, ensure your Python user scripts path is in `PATH`. On macOS/Linux this is typically `~/.local/bin` (or the path returned by `python3 -m site --user-base` + `/bin`).
-- You can also use the PlatformIO extension inside VS Code, but installing the CLI is recommended for terminal builds and generating compiledb.
+See [PlatformIO Installation Guide](https://docs.platformio.org/en/latest/core/installation/index.html) and install the Shell Commands, so you can run `pio` from the terminal.
 
 ## 2) Ensure `platformio.ini` is configured
 
@@ -98,7 +93,7 @@ rm -rf .pio/build .pio/libdeps .pio/.cache  # careful: removes PlatformIO caches
 pio run
 ```
 
-## 4) (Optional, but recommended) Generate `compile_commands.json` for editor intellisense
+## 4) Generate `compile_commands.json` for editor intellisense (Optional, but recommended)
 
 Many language servers (clangd, ccls) and editors accept a `compile_commands.json` database that contains the compile flags and include paths for each translation unit. PlatformIO can generate it for you.
 
@@ -142,14 +137,7 @@ pio lib uninstall <LIBNAME>
 pio lib install <LIBNAME>
 ```
 
-## 7) If the problem is code-level (not environment)
-
-- The compiler will show errors and line numbers. Fix the code errors shown by the compiler — example common fixes:
-  - Forward-declare functions if they are used before their definitions.
-  - Convert `String` to `const char*` for `display.println()` if your language server complains: `display.println(line.c_str());`
-  - Make sure constants/macros (e.g., `NUM_LEDS`) are correctly defined and in scope.
-
-## 8) Example quick checklist to get to a successful `pio run`
+## 7) Example quick checklist to get to a successful `pio run`
 
 1. Ensure Python is installed and `pio` works:
    ```/dev/null/commands.sh#L1-4
@@ -172,28 +160,3 @@ pio lib install <LIBNAME>
    pio run --target compiledb
    # Restart editor / language server
    ```
-
----
-
-## Wokwi Simulation (wokwi/diagram.json)
-
-This project contains a Wokwi diagram file at `wokwi/diagram.json` plus a detailed guide at `wokwi/README.md`. Important: the `diagram.json` in this repository describes the simulated hardware wiring and components only — it does NOT include the firmware/sketch by default.
-
-How to use the diagram and run code:
-1. Open https://wokwi.com in your browser and open the Wokwi editor.
-2. Import the diagram (drag-and-drop `wokwi/diagram.json`, use the editor's Import menu, or paste the JSON).
-3. After the diagram loads, you must add the firmware/sketch in Wokwi's Code or Files panel (paste your `.ino` / `.cpp` source or create a new sketch file). See `wokwi/README.md` for step-by-step instructions.
-4. Click Run to compile and start the simulation. Open the Serial Monitor to view serial output and use the on-screen controls to interact with simulated inputs (keypad, switches, etc.).
-
-Preview (screenshot)
-Below is a screenshot of the Wokwi editor showing the loaded diagram. The image is included in the repository under `assets/wokwi_diagram.png`.
-
-![Wokwi diagram screenshot](assets/wokwi_diagram.png)
-
-Additional notes:
-- A copy of the diagram JSON has been saved to `assets/wokwi-diagram.json` for quick access.
-- Because the repository `diagram.json` does not contain the sketch, you need to paste or create the sketch inside Wokwi before running the simulation.
-- The Wokwi simulation is useful for quick prototyping and visualization but may differ from real hardware. Always verify behavior on physical hardware.
-- If Wokwi reports missing libraries or unsupported components, consult `wokwi/README.md` for troubleshooting and possible substitutions.
-
-If you get a specific `pio run` error message, paste the exact output here (or at least the last ~40 lines) and I will help you resolve it step-by-step.
