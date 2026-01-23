@@ -19062,6 +19062,48 @@
 			)
 		)
 	)
+	(sheet
+		(at 41.91 163.83)
+		(size 26.67 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "dfd1d0eb-bf3a-43d1-b673-cd8f75111fe3")
+		(property "Sheetname" "Shift Register"
+			(at 41.91 163.1184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "shift_register.kicad_sch"
+			(at 41.91 187.2746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "fbi"
+				(path "/8a94cea8-93b7-482c-bb6b-daa13c735e50"
+					(page "2")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
