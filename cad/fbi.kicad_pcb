@@ -43178,49 +43178,6 @@
 		(net 312)
 		(uuid "da595aab-a67f-4060-80e2-c9127ad91154")
 	)
-	(zone
-		(net 3)
-		(net_name "GND")
-		(layer "B.Cu")
-		(uuid "4027716f-0f98-4b25-8712-3e6b01a4d951")
-		(hatch edge 0.5)
-		(priority 1)
-		(connect_pads
-			(clearance 0.5)
-		)
-		(min_thickness 0.25)
-		(filled_areas_thickness no)
-		(fill
-			(thermal_gap 0.5)
-			(thermal_bridge_width 0.5)
-		)
-		(polygon
-			(pts
-				(xy 245.5 17.5) (xy 274 17.5) (xy 274 61) (xy 245.5 61)
-			)
-		)
-	)
-	(zone
-		(net 3)
-		(net_name "GND")
-		(layer "B.Cu")
-		(uuid "8f00e5d1-7aeb-4b40-a0b4-14e80b02e0ae")
-		(hatch edge 0.5)
-		(connect_pads
-			(clearance 0.5)
-		)
-		(min_thickness 0.25)
-		(filled_areas_thickness no)
-		(fill
-			(thermal_gap 0.5)
-			(thermal_bridge_width 0.5)
-		)
-		(polygon
-			(pts
-				(xy 207 17.5) (xy 237 17.5) (xy 237 137.5) (xy 207 137.5)
-			)
-		)
-	)
 	(group ""
 		(uuid "083817e4-1d1e-4f1a-8066-fdcd90bbbaca")
 		(members "a3a6e9de-eab3-4959-8252-93d01ee7ddab" "ad0c8aea-2937-49d2-97a6-f8ef3bb4205b")
