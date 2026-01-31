@@ -4,10 +4,13 @@
   + OLED Status Display
 */
 
+#include "esp32-hal-gpio.h"
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <Keypad.h>
+
+#define BUTTON_A 4
 
 // --- Config: Shift Registers ---
 #define DATA_PIN  12
@@ -59,6 +62,7 @@ void updateDisplay(String line1, String line2);
 
 void setup() {
   Serial.begin(115200);
+  pinMode(BUTTON_A, INPUT_PULLUP);
 
   // 1. Initialize Shift Register Pins
   pinMode(LATCH_PIN, OUTPUT);
@@ -93,6 +97,11 @@ void loop() {
 
   if (key) {
     handleKeypress(key);
+  }
+  if (digitalRead(BUTTON_A) == LOW) {
+      setAllRelays(true);
+      delay(1000);
+      setAllRelays(false);
   }
 }
 

@@ -3450,10 +3450,10 @@
 		(uuid "52f50de7-f61f-4956-b7a8-2f285dce087f")
 	)
 	(junction
-		(at 166.37 101.6)
+		(at 166.37 111.76)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "75fe7313-04c8-4d41-98a0-f4fb813d70f5")
+		(uuid "769a68b1-9780-4774-987d-28753beebcba")
 	)
 	(junction
 		(at 52.07 53.34)
@@ -3712,16 +3712,6 @@
 			(type default)
 		)
 		(uuid "c2333dbc-7c8a-4477-9319-1a4aa1f333a6")
-	)
-	(wire
-		(pts
-			(xy 166.37 101.6) (xy 168.91 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c5d1b568-ec43-4acc-a3b7-f10ca27a0299")
 	)
 	(wire
 		(pts
@@ -4319,6 +4309,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 166.37 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "107eeb59-6224-40d2-bdee-7bee5a29a948")
+		(property "Reference" "#PWR04"
+			(at 166.37 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 166.37 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 166.37 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 166.37 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 166.37 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ea962572-bf91-484b-8848-2739ef50f907")
+		)
+		(instances
+			(project "fbi"
+				(path "/8a94cea8-93b7-482c-bb6b-daa13c735e50/5adab415-5d02-4004-99cb-b65468ed6387"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 76.2 58.42 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4518,72 +4574,6 @@
 			(project "fbi"
 				(path "/8a94cea8-93b7-482c-bb6b-daa13c735e50/5adab415-5d02-4004-99cb-b65468ed6387"
 					(reference "U5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 168.91 101.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3d279d20-7b44-4914-b298-716e21de9300")
-		(property "Reference" "#PWR0102"
-			(at 168.91 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 168.91 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 168.91 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 168.91 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 168.91 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4222c7dd-14c4-4fd4-ac62-3a5d1362813e")
-		)
-		(instances
-			(project "fbi"
-				(path "/8a94cea8-93b7-482c-bb6b-daa13c735e50/5adab415-5d02-4004-99cb-b65468ed6387"
-					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
