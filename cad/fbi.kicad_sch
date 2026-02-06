@@ -1,0 +1,103 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "8a94cea8-93b7-482c-bb6b-daa13c735e50")
+	(paper "A3")
+	(title_block
+		(title "FIFO Board Indicator")
+		(date "2026-01-16")
+		(rev "0")
+	)
+	(lib_symbols)
+	(sheet
+		(at 31.75 167.64)
+		(size 26.67 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5adab415-5d02-4004-99cb-b65468ed6387")
+		(property "Sheetname" "ESP32-S3"
+			(at 31.75 166.9284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "esp32_s3.kicad_sch"
+			(at 31.75 187.2746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "fbi"
+				(path "/8a94cea8-93b7-482c-bb6b-daa13c735e50"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 31.75 195.58)
+		(size 26.67 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "dfd1d0eb-bf3a-43d1-b673-cd8f75111fe3")
+		(property "Sheetname" "Shift Register"
+			(at 31.75 194.8684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "shift_register.kicad_sch"
+			(at 31.75 215.2146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "fbi"
+				(path "/8a94cea8-93b7-482c-bb6b-daa13c735e50"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
