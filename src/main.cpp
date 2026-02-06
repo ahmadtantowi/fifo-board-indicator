@@ -4,10 +4,7 @@
   + OLED Status Display
 */
 
-#include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-#include <Keypad.h>
+#include <Arduino.h>
 
 // --- Config: Buttons ---
 #define BUTTON_A 28
@@ -21,30 +18,6 @@
 #define NUM_SHIFT_REGISTERS 28
 #define NUM_LEDS (NUM_SHIFT_REGISTERS * 8)
 
-// --- Config: OLED Display ---
-#define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 64
-#define OLED_RESET    -1
-#define SCREEN_ADDRESS 0x3C
-#define OLED_SDA 8
-#define OLED_SCL 9
-
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
-
-// --- Config: Keypad ---
-const byte ROWS = 4;
-const byte COLS = 4;
-char keys[ROWS][COLS] = {
-  {'1','2','3','A'},
-  {'4','5','6','B'},
-  {'7','8','9','C'},
-  {'*','0','#','D'}
-};
-byte rowPins[ROWS] = {4, 5, 6, 7};
-byte colPins[COLS] = {15, 16, 17, 18};
-
-Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
-
 // --- Global Variables ---
 byte relayStates[NUM_SHIFT_REGISTERS];
 String inputBuffer = "";
@@ -54,19 +27,16 @@ void handleKeypress(char key);
 void setAllRelays(bool state);
 void runSequence();
 void flashAllRelays();
-void sweepShiftRegisters();
 void toggleRelay(int relayId);
 void setRelay(int ledId, bool state);
 void updateShiftRegisters();
-void updateStatusScreen();
-void updateDisplay(String line1, String line2);
 
 void setup() {
   Serial.begin(115200);
   pinMode(BUTTON_A, INPUT_PULLUP);
   pinMode(BUTTON_B, INPUT_PULLUP);
 
-  // 1. Initialize Shift Register Pins
+  // Initialize Shift Register Pins
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
   pinMode(DATA_PIN, OUTPUT);
@@ -76,79 +46,17 @@ void setup() {
   // Clear all LEDs initially
   setAllRelays(false);
 
-  // 2. Initialize OLED
-  Wire.begin(OLED_SDA, OLED_SCL);
-  if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
-    Serial.println(F("SSD1306 allocation failed"));
-    for(;;);
-  }
-  display.clearDisplay();
-  display.setTextColor(SSD1306_WHITE);
-
-  // Show Startup Screen
-  updateDisplay("Ready", "Type ID#");
-
   // Enable outputs after startup init completes
   digitalWrite(OE_PIN, LOW);
 
-  sweepShiftRegisters(); // Run a register sweep once after flash
+  flashAllRelays(); // Run a register sweep once after flash
 }
 
 void loop() {
-  char key = keypad.getKey();
-
-  if (key) {
-    handleKeypress(key);
-  }
   if (digitalRead(BUTTON_A) == LOW) {
-      setAllRelays(true);
-      delay(1000);
-      setAllRelays(false);
-  }
-}
-
-// --- Logic: Keypad Handling ---
-void handleKeypress(char key) {
-  // If user types a number (0-9)
-  if (key >= '0' && key <= '9') {
-    if (inputBuffer.length() < 3) {
-      inputBuffer += key;
-    }
-    updateStatusScreen();
-  }
-  // If user presses '*' -> Clear Input
-  else if (key == '*') {
-    inputBuffer = "";
-    updateDisplay("Cleared", "Type ID#");
-  }
-  // If user presses '#' -> Toggle the specific Relay ID
-  else if (key == '#') {
-    if (inputBuffer.length() > 0) {
-      int id = inputBuffer.toInt();
-      toggleRelay(id);
-      inputBuffer = "";
-    }
-  }
-  // --- NEW FEATURES ---
-  else if (key == 'A') {
-    inputBuffer = "";
-    updateDisplay("Action:", "All OFF");
-    setAllRelays(false); // Turn all OFF
-  }
-  else if (key == 'B') {
-    inputBuffer = "";
-    updateDisplay("Action:", "Sequence...");
-    runSequence(); // Run sequential chaser
-  }
-  else if (key == 'C') {
-    inputBuffer = "";
-    updateDisplay("Action:", "Flashing!");
-    flashAllRelays(); // Flash 3 times
-  }
-  else if (key == 'D') {
-    inputBuffer = "";
-    updateDisplay("Action:", "All ON");
-    setAllRelays(true); // Turn all ON
+      runSequence();
+  } else if (digitalRead(BUTTON_B) == LOW) {
+      flashAllRelays();
   }
 }
 
@@ -163,32 +71,23 @@ void setAllRelays(bool state) {
   updateShiftRegisters();
 }
 
-// Keypad B: Run relays sequentially (Chaser effect)
+// Run relays sequentially for each shift register
 void runSequence() {
-  // Ensure everything is off first
   setAllRelays(false);
-
-  for (int i = 0; i < NUM_LEDS; i++) {
-    // Check if user wants to abort sequence by pressing '*'
-    char key = keypad.getKey();
-    if (key != NO_KEY && key == '*') {
-      updateDisplay("Stopped", "Ready");
-      setAllRelays(false);
-      return;
+  for (int bit = 0; bit < 8; bit++) {
+    for (int reg = 0; reg < NUM_SHIFT_REGISTERS; reg++) {
+      relayStates[reg] |= (1 << bit);
     }
-
-    setRelay(i, true);
     updateShiftRegisters();
-    delay(30); // Speed of the sequence (adjust as needed)
-    setRelay(i, false); // Turn it off to create a "moving dot" effect
-    // Note: Remove the line above if you want them to "fill up" instead of "chase"
+    delay(200);
+    for (int reg = 0; reg < NUM_SHIFT_REGISTERS; reg++) {
+      relayStates[reg] &= ~(1 << bit);
+    }
   }
-  // Ensure last one is off
-  updateShiftRegisters();
-  updateDisplay("Done", "Ready");
+  Serial.println(F("Run sequence Done"));
 }
 
-// Keypad C: Flash all relays 3 times
+// Flash all relays 3 times
 void flashAllRelays() {
   for(int k=0; k<3; k++) {
     setAllRelays(true);
@@ -196,22 +95,7 @@ void flashAllRelays() {
     setAllRelays(false);
     delay(200);
   }
-  updateDisplay("Done", "Ready");
-}
-
-void sweepShiftRegisters() {
-  setAllRelays(false);
-  for (int bit = 0; bit < 8; bit++) {
-    for (int reg = 0; reg < NUM_SHIFT_REGISTERS; reg++) {
-      relayStates[reg] |= (1 << bit);
-    }
-    updateShiftRegisters();
-    delay(75);
-    for (int reg = 0; reg < NUM_SHIFT_REGISTERS; reg++) {
-      relayStates[reg] &= ~(1 << bit);
-    }
-  }
-  updateShiftRegisters();
+  Serial.println(F("Flash all Done"));
 }
 
 // --- Logic: Relay Control ---
@@ -219,7 +103,7 @@ void sweepShiftRegisters() {
 // Toggle a specific relay ID
 void toggleRelay(int relayId) {
   if (relayId < 0 || relayId >= NUM_LEDS) {
-    updateDisplay("Error", "Invalid ID");
+    Serial.println(F("Error: Invalid ID"));
     return;
   }
 
@@ -233,7 +117,7 @@ void toggleRelay(int relayId) {
 
   String statusMsg = "Relay " + String(relayId);
   String stateMsg = !isOne ? "ON" : "OFF";
-  updateDisplay(statusMsg, stateMsg);
+  Serial.println(statusMsg + " " + stateMsg);
 }
 
 // Basic set relay function (updates array only)
@@ -256,33 +140,4 @@ void updateShiftRegisters() {
     shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, relayStates[i]);
   }
   digitalWrite(LATCH_PIN, HIGH);
-}
-
-// --- Logic: Display Helper ---
-
-void updateStatusScreen() {
-  int id = inputBuffer.toInt();
-  String top = "Target: " + inputBuffer;
-
-  String bottom = "";
-  if (id >= 0 && id < NUM_LEDS) {
-    int registerIndex = id / 8;
-    int bitIndex = id % 8;
-    bool isOn = (relayStates[registerIndex] & (1 << bitIndex));
-    bottom = "Curr: " + String(isOn ? "ON" : "OFF");
-  } else {
-    bottom = "Inv Range";
-  }
-
-  updateDisplay(top, bottom);
-}
-
-void updateDisplay(String line1, String line2) {
-  display.clearDisplay();
-  display.setTextSize(2);
-  display.setCursor(0, 0);
-  display.println(line1);
-  display.setCursor(0, 32);
-  display.println(line2);
-  display.display();
 }
