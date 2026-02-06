@@ -6,15 +6,24 @@
 
 #include <Arduino.h>
 
-// --- Config: Buttons ---
-#define BUTTON_A 28
-#define BUTTON_B 29
+#ifdef BOARD_C3
+    #define BUTTON_A 5
+    #define BUTTON_B 6
 
-// --- Config: Shift Registers ---
-#define CLOCK_PIN 4
-#define LATCH_PIN 5
-#define OE_PIN    6
-#define DATA_PIN  7
+    #define CLOCK_PIN 2
+    #define LATCH_PIN 3
+    #define OE_PIN    0
+    #define DATA_PIN  1
+#elif BOARD_S3
+    #define BUTTON_A 28
+    #define BUTTON_B 29
+
+    #define CLOCK_PIN 4
+    #define LATCH_PIN 5
+    #define OE_PIN    6
+    #define DATA_PIN  7
+#endif
+
 #define NUM_SHIFT_REGISTERS 28
 #define NUM_LEDS (NUM_SHIFT_REGISTERS * 8)
 
@@ -23,7 +32,6 @@ byte relayStates[NUM_SHIFT_REGISTERS];
 String inputBuffer = "";
 
 // Forward declarations for functions
-void handleKeypress(char key);
 void setAllRelays(bool state);
 void runSequence();
 void flashAllRelays();
@@ -84,6 +92,7 @@ void runSequence() {
       relayStates[reg] &= ~(1 << bit);
     }
   }
+  setAllRelays(false);
   Serial.println(F("Run sequence Done"));
 }
 
