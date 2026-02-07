@@ -3,6 +3,9 @@
 */
 
 #include <Arduino.h>
+#include <Print.h>
+#include <WiFi.h>
+#include <PubSubClient.h>
 
 #ifdef BOARD_C3
     #define BUTTON_A 5
@@ -27,7 +30,18 @@
 
 // --- Global Variables ---
 byte relayStates[NUM_SHIFT_REGISTERS];
-String inputBuffer = "";
+WiFiClient espClient;
+PubSubClient client(espClient);
+
+// --- WiFi and MQTT credentials ---
+const char* ssid = "wifi ssid";
+const char* password = "wifi password";
+const char* mqtt_server = "192.168.100.165";
+const int mqtt_port = 1883;
+
+unsigned long lastWifiAttempt = 0;
+unsigned long lastMqttAttempt = 0;
+const unsigned long retry_intv = 5000; // retry every 5 seconds
 
 // Forward declarations for functions
 void setAllRelays(bool state);
@@ -36,9 +50,24 @@ void flashAllRelays();
 void toggleRelay(int relayId);
 void setRelay(int ledId, bool state);
 void updateShiftRegisters();
+void maintainWiFi(bool blocking);
+void maintainMQTT(bool blocking);
+void onReceived(char* topic, byte* payload, unsigned int length);
 
 void setup() {
     Serial.begin(115200);
+
+    // Setup MQTT settings
+    client.setServer(mqtt_server, 1883);
+    client.setCallback(onReceived);
+    client.setBufferSize(512);
+
+    Serial.println(F(" --- System Starting ---"));
+
+    // BLOCKING calls for setup (Wait until both are ready before starting loop)
+    maintainWiFi(true);
+    maintainMQTT(true);
+
     pinMode(BUTTON_A, INPUT_PULLUP);
     pinMode(BUTTON_B, INPUT_PULLUP);
 
@@ -56,14 +85,116 @@ void setup() {
     digitalWrite(OE_PIN, LOW);
 
     flashAllRelays(); // Run a register sweep once after flash
+
+    Serial.println(F(" --- System Ready ---"));
 }
 
 void loop() {
+    // NON-BLOCKING calls for loop (Checks in background)
+    maintainWiFi(false);
+    maintainMQTT(false);
+
+    // Your main code goes here (it will run smoothly)
+    static unsigned long lastMsg = 0;
+    if (millis() - lastMsg > 2000) {
+        lastMsg = millis();
+        if (client.connected()) {
+            client.publish("esp32/status", "Alive", false, 0);
+        }
+    }
+
     if (digitalRead(BUTTON_A) == LOW) {
         runSequence();
     } else if (digitalRead(BUTTON_B) == LOW) {
         flashAllRelays();
     }
+}
+
+// --- Logic: Network Connection ---
+void maintainWiFi(bool blocking) {
+    // 1. If we are already connected, do nothing
+    if (WiFi.status() == WL_CONNECTED) {
+        return;
+    }
+
+    // 2. If we are NOT connected, check if it's time to try again
+    unsigned long now = millis();
+    if (blocking || (now - lastWifiAttempt > retry_intv)) {
+        lastWifiAttempt = now;
+
+        Serial.println(F("WiFi: Connecting..."));
+
+        // We only need to call begin() once, but calling it again forces a re-attempt
+        // Check if we are totally disconnected before calling begin again to avoid spamming
+        if (WiFi.status() != WL_CONNECTED) {
+            WiFi.disconnect();
+            WiFi.begin(ssid, password);
+        }
+
+        // If blocking is TRUE, we stay here until connected
+        if (blocking) {
+        while (WiFi.status() != WL_CONNECTED) {
+            delay(500);
+            Serial.print(".");
+        }
+        Serial.println(F("\nWiFi: Connected!"));
+        Serial.print(F("IP Address: "));
+        Serial.println(WiFi.localIP());
+        }
+    }
+}
+
+void maintainMQTT(bool blocking) {
+    // 1. If WiFi is down, we can't do MQTT
+    if (WiFi.status() != WL_CONNECTED) return;
+
+    // 2. If already connected, do maintenance (loop) and return
+    if (client.connected()) {
+        client.loop();
+        return;
+    }
+
+    // 3. If NOT connected, check if it's time to try again
+    unsigned long now = millis();
+    if (blocking || (now - lastMqttAttempt > retry_intv)) {
+        lastMqttAttempt = now;
+        Serial.print(F("MQTT: Attempting connection..."));
+
+        // Create a random client ID
+        String clientId = "ESP32Client-";
+        clientId += String(random(0xffff), HEX);
+
+        // Attempt to connect
+        if (client.connect(clientId.c_str())) {
+            Serial.println(F("connected"));
+            // ON CONNECT: Resubscribe to topics here
+            client.subscribe("esp32/led", 1);
+        } else {
+            Serial.print(F("failed, rc="));
+            Serial.print(client.state()); // http://pubsubclient.knolleary.net/api.html#state
+
+            if (blocking) {
+                Serial.println(F(" retrying in 5 seconds..."));
+                delay(5000);
+                maintainMQTT(true); // Recursive call for blocking mode
+            } else {
+                Serial.println(F(" (background retry pending)"));
+            }
+        }
+    }
+}
+
+// --- Logic: MQTT ---
+void onReceived(char* topic, byte* payload, unsigned int length) {
+    Serial.print(F("Message arrived ["));
+    Serial.print(topic);
+    Serial.print(F("]: "));
+
+    String message;
+    for (int i = 0; i < length; i++) {
+        message += (char)payload[i];
+    }
+    Serial.println(message);
 }
 
 // --- Logic: Special Functions ---
