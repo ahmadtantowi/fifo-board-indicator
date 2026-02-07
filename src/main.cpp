@@ -60,6 +60,7 @@ int extractId(const String& topic);
 
 void setup() {
     Serial.begin(115200);
+    pinMode(LED_BUILTIN, OUTPUT);
 
     // Setup MQTT settings
     client.setServer(MQTT_SERVER, 1883);
@@ -132,18 +133,20 @@ void maintainWiFi(bool blocking) {
         // Check if we are totally disconnected before calling begin again to avoid spamming
         if (WiFi.status() != WL_CONNECTED) {
             WiFi.disconnect();
-            WiFi.begin(ssid, password);
+            WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
         }
 
         // If blocking is TRUE, we stay here until connected
         if (blocking) {
-        while (WiFi.status() != WL_CONNECTED) {
-            delay(500);
-            Serial.print(".");
-        }
-        Serial.println(F("\nWiFi: Connected!"));
-        Serial.print(F("IP Address: "));
-        Serial.println(WiFi.localIP());
+            while (WiFi.status() != WL_CONNECTED) {
+                digitalWrite(LED_BUILTIN, HIGH);
+                delay(1000);
+                Serial.print(".");
+                digitalWrite(LED_BUILTIN, LOW);
+            }
+            Serial.println(F("\nWiFi: Connected!"));
+            Serial.print(F("IP Address: "));
+            Serial.println(WiFi.localIP());
         }
     }
 }
