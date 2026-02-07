@@ -34,14 +34,15 @@ WiFiClient espClient;
 PubSubClient client(espClient);
 
 // --- WiFi and MQTT credentials ---
-const char* ssid = "wifi ssid";
-const char* password = "wifi password";
-const char* mqtt_server = "192.168.100.165";
-const int mqtt_port = 1883;
+const char* WIFI_SSID = "wifi ssid";
+const char* WIFI_PASSWORD = "wifi password";
+const char* MQTT_SERVER = "localhost";
+const int MQTT_PORT = 1883;
+const char* MQTT_TOPIC = "lamp/+/set"; // lamp/{id}/set
 
 unsigned long lastWifiAttempt = 0;
 unsigned long lastMqttAttempt = 0;
-const unsigned long retry_intv = 5000; // retry every 5 seconds
+const unsigned long RETRY_INTERVAL = 5000; // retry every 5 seconds
 
 // Forward declarations for functions
 void setAllRelays(bool state);
@@ -53,12 +54,15 @@ void updateShiftRegisters();
 void maintainWiFi(bool blocking);
 void maintainMQTT(bool blocking);
 void onReceived(char* topic, byte* payload, unsigned int length);
+void handleRelayMessage(const String& topic, const String& payload);
+bool tryParseState(const String& payload, bool* stateOut);
+int extractId(const String& topic);
 
 void setup() {
     Serial.begin(115200);
 
     // Setup MQTT settings
-    client.setServer(mqtt_server, 1883);
+    client.setServer(MQTT_SERVER, 1883);
     client.setCallback(onReceived);
     client.setBufferSize(512);
 
@@ -119,7 +123,7 @@ void maintainWiFi(bool blocking) {
 
     // 2. If we are NOT connected, check if it's time to try again
     unsigned long now = millis();
-    if (blocking || (now - lastWifiAttempt > retry_intv)) {
+    if (blocking || (now - lastWifiAttempt > RETRY_INTERVAL)) {
         lastWifiAttempt = now;
 
         Serial.println(F("WiFi: Connecting..."));
@@ -156,7 +160,7 @@ void maintainMQTT(bool blocking) {
 
     // 3. If NOT connected, check if it's time to try again
     unsigned long now = millis();
-    if (blocking || (now - lastMqttAttempt > retry_intv)) {
+    if (blocking || (now - lastMqttAttempt > RETRY_INTERVAL)) {
         lastMqttAttempt = now;
         Serial.print(F("MQTT: Attempting connection..."));
 
@@ -168,7 +172,7 @@ void maintainMQTT(bool blocking) {
         if (client.connect(clientId.c_str())) {
             Serial.println(F("connected"));
             // ON CONNECT: Resubscribe to topics here
-            client.subscribe("esp32/led", 1);
+            client.subscribe(MQTT_TOPIC, 1);
         } else {
             Serial.print(F("failed, rc="));
             Serial.print(client.state()); // http://pubsubclient.knolleary.net/api.html#state
@@ -195,6 +199,60 @@ void onReceived(char* topic, byte* payload, unsigned int length) {
         message += (char)payload[i];
     }
     Serial.println(message);
+    handleRelayMessage(topic, message);
+}
+
+void handleRelayMessage(const String& topic, const String& payload) {
+    bool desiredState = false;
+    if (!tryParseState(payload, &desiredState)) return;
+
+    int id = extractId(topic);
+    if (id < 0){
+        setAllRelays(desiredState);
+        Serial.print(F("Set ALL relay to "));
+        Serial.println(desiredState ? "ON" : "OFF");
+        return;
+    } else if (id >= NUM_LEDS){
+        Serial.println(F("Invalid relay ID"));
+        return;
+    }
+    setRelay(id, desiredState);
+    updateShiftRegisters();
+    Serial.print(F("Relay "));
+    Serial.print(id);
+    Serial.print(F(" state: "));
+    Serial.println(desiredState ? F("ON") : F("OFF"));
+}
+
+bool tryParseState(const String& payload, bool* stateOut) {
+    if (!stateOut) return false;
+
+    String normalized = payload;
+    normalized.trim();
+    normalized.toLowerCase();
+    if (normalized == "on" || normalized == "1" || normalized == "true") {
+        *stateOut = true;
+        return true;
+    }
+    if (normalized == "off" || normalized == "0" || normalized == "false") {
+        *stateOut = false;
+        return true;
+    }
+    return false;
+}
+
+int extractId(const String& topic) {
+    if (!topic.startsWith("lamp/")) return -1;
+    int secondSlash = topic.indexOf('/', 5);
+    if (secondSlash < 0) return -1;
+    if (topic.substring(secondSlash) != "/set") return -1;
+
+    String idPart = topic.substring(5, secondSlash);
+    if (idPart.length() == 0) return -1;
+    for (unsigned int i = 0; i < idPart.length(); i++) {
+        if (!isDigit(idPart[i])) return -1;
+    }
+    return idPart.toInt();
 }
 
 // --- Logic: Special Functions ---
