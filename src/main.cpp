@@ -36,9 +36,9 @@ WiFiClient espClient;
 PubSubClient client(espClient);
 
 // --- WiFi and MQTT credentials ---
-const char* WIFI_SSID = "wifi ssid";
-const char* WIFI_PASSWORD = "wifi password";
-const char* MQTT_SERVER = "localhost";
+const char* WIFI_SSID = "BUDI UTAMI";
+const char* WIFI_PASSWORD = "SugandaCRT21";
+const char* MQTT_SERVER = "192.168.100.165";
 const int MQTT_PORT = 1883;
 const char* MQTT_TOPIC = "lamp/+/set"; // lamp/{id}/set
 
@@ -314,6 +314,7 @@ void setAllRelays(bool state) {
         relayStates[i] = fillValue;
     }
     updateShiftRegisters();
+    client.publish("lamp/-1/state", state ? "ON" : "OFF", 1, false);
 }
 
 // Run relays sequentially for each shift register
@@ -330,7 +331,7 @@ void runSequence() {
         }
     }
     setAllRelays(false);
-    Serial.println(F("Run sequence Done"));
+    client.publish("lamp/sequence", "completed", 1, false);
 }
 
 // Flash all relays 3 times
@@ -341,7 +342,7 @@ void flashAllRelays() {
         setAllRelays(false);
         delay(200);
     }
-    Serial.println(F("Flash all Done"));
+    client.publish("lamp/flash", "completed", 1, false);
 }
 
 // --- Logic: Relay Control ---
@@ -377,6 +378,8 @@ void setRelay(int ledId, bool state) {
     } else {
         relayStates[registerIndex] &= ~(1 << bitIndex);
     }
+    String topic = "lamp/" + String(ledId) + "/state";
+    client.publish(topic.c_str(), state ? "ON" : "OFF", 1, false);
 }
 
 // Push data to chips
