@@ -52,6 +52,8 @@ unsigned long mqttRetryInterval = RETRY_INTERVAL_INITIAL;
 // Blocking connect timeouts to avoid infinite hangs in setup
 const unsigned long WIFI_BLOCK_TIMEOUT = 20000; // 20s
 const unsigned long MQTT_BLOCK_TIMEOUT = 20000; // 20s
+// Track connection transition to print one-time connect message
+bool wifiConnectedState = false;
 
 // Forward declarations for functions
 void setAllRelays(bool state);
@@ -130,10 +132,18 @@ void loop() {
 
 // --- Logic: Network Connection ---
 void maintainWiFi(bool blocking) {
-    // 1. If we are already connected, reset backoff and do nothing
+    // 1. If we are already connected, print one-time message, reset backoff and do nothing
     if (WiFi.status() == WL_CONNECTED) {
+        if (!wifiConnectedState) {
+            Serial.println(F("WiFi: Connected!"));
+            Serial.print(F("IP Address: "));
+            Serial.println(WiFi.localIP());
+            wifiConnectedState = true;
+        }
         wifiRetryInterval = RETRY_INTERVAL_INITIAL;
         return;
+    } else {
+        wifiConnectedState = false;
     }
 
     // 2. If we are NOT connected, check if it's time to try again
@@ -159,9 +169,7 @@ void maintainWiFi(bool blocking) {
                 delay(100);
             }
             if (WiFi.status() == WL_CONNECTED) {
-                Serial.println(F("\nWiFi: Connected!"));
-                Serial.print(F("IP Address: "));
-                Serial.println(WiFi.localIP());
+                wifiConnectedState = true;
                 wifiRetryInterval = RETRY_INTERVAL_INITIAL;
             } else {
                 Serial.println(F("\nWiFi: Failed to connect (timeout)"));
