@@ -5,6 +5,7 @@
 #include <Arduino.h>
 #include <Print.h>
 #include <WiFi.h>
+#include <esp_wifi.h>
 #include <PubSubClient.h>
 
 #ifdef BOARD_C3
@@ -29,7 +30,8 @@
 #define NUM_LEDS (NUM_SHIFT_REGISTERS * 8)
 
 // --- Global Variables ---
-byte relayStates[NUM_SHIFT_REGISTERS];
+// Use explicit integer type for clarity
+uint8_t relayStates[NUM_SHIFT_REGISTERS];
 WiFiClient espClient;
 PubSubClient client(espClient);
 
@@ -42,7 +44,14 @@ const char* MQTT_TOPIC = "lamp/+/set"; // lamp/{id}/set
 
 unsigned long lastWifiAttempt = 0;
 unsigned long lastMqttAttempt = 0;
-const unsigned long RETRY_INTERVAL = 5000; // retry every 5 seconds
+// Retry/backoff settings
+const unsigned long RETRY_INTERVAL_INITIAL = 5000; // initial retry interval (ms)
+const unsigned long RETRY_INTERVAL_MAX = 60000; // cap backoff at 60s
+unsigned long wifiRetryInterval = RETRY_INTERVAL_INITIAL;
+unsigned long mqttRetryInterval = RETRY_INTERVAL_INITIAL;
+// Blocking connect timeouts to avoid infinite hangs in setup
+const unsigned long WIFI_BLOCK_TIMEOUT = 20000; // 20s
+const unsigned long MQTT_BLOCK_TIMEOUT = 20000; // 20s
 
 // Forward declarations for functions
 void setAllRelays(bool state);
@@ -89,7 +98,11 @@ void setup() {
     // Enable outputs after startup init completes
     digitalWrite(OE_PIN, LOW);
 
-    flashAllRelays(); // Run a register sweep once after flash
+    if (WiFi.status() == WL_CONNECTED) {
+        runSequence();
+    } else {
+        flashAllRelays();
+    }
 
     Serial.println(F(" --- System Ready ---"));
 }
@@ -117,36 +130,50 @@ void loop() {
 
 // --- Logic: Network Connection ---
 void maintainWiFi(bool blocking) {
-    // 1. If we are already connected, do nothing
+    // 1. If we are already connected, reset backoff and do nothing
     if (WiFi.status() == WL_CONNECTED) {
+        wifiRetryInterval = RETRY_INTERVAL_INITIAL;
         return;
     }
 
     // 2. If we are NOT connected, check if it's time to try again
     unsigned long now = millis();
-    if (blocking || (now - lastWifiAttempt > RETRY_INTERVAL)) {
+    if (blocking || (now - lastWifiAttempt > wifiRetryInterval)) {
         lastWifiAttempt = now;
 
         Serial.println(F("WiFi: Connecting..."));
 
-        // We only need to call begin() once, but calling it again forces a re-attempt
-        // Check if we are totally disconnected before calling begin again to avoid spamming
-        if (WiFi.status() != WL_CONNECTED) {
-            WiFi.disconnect();
-            WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-        }
+        // Attempt to connect (disconnect first to force a fresh attempt)
+        WiFi.disconnect();
+        esp_wifi_set_max_tx_power(8.5);
+        WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
-        // If blocking is TRUE, we stay here until connected
+        // If blocking is TRUE, wait up to WIFI_BLOCK_TIMEOUT for connection
         if (blocking) {
-            while (WiFi.status() != WL_CONNECTED) {
+            unsigned long start = millis();
+            while (WiFi.status() != WL_CONNECTED && (millis() - start) < WIFI_BLOCK_TIMEOUT) {
                 digitalWrite(LED_BUILTIN, HIGH);
-                delay(1000);
-                Serial.print(".");
+                delay(500);
+                Serial.print('.');
                 digitalWrite(LED_BUILTIN, LOW);
+                delay(100);
             }
-            Serial.println(F("\nWiFi: Connected!"));
-            Serial.print(F("IP Address: "));
-            Serial.println(WiFi.localIP());
+            if (WiFi.status() == WL_CONNECTED) {
+                Serial.println(F("\nWiFi: Connected!"));
+                Serial.print(F("IP Address: "));
+                Serial.println(WiFi.localIP());
+                wifiRetryInterval = RETRY_INTERVAL_INITIAL;
+            } else {
+                Serial.println(F("\nWiFi: Failed to connect (timeout)"));
+                // bump backoff for next non-blocking attempt
+                wifiRetryInterval = min(wifiRetryInterval * 2, RETRY_INTERVAL_MAX);
+            }
+        } else {
+            // Non-blocking: if connect didn't happen quickly, increase backoff
+            if (WiFi.status() != WL_CONNECTED) {
+                wifiRetryInterval = min(wifiRetryInterval * 2, RETRY_INTERVAL_MAX);
+                Serial.println(F("WiFi: Background retry scheduled"));
+            }
         }
     }
 }
@@ -163,29 +190,49 @@ void maintainMQTT(bool blocking) {
 
     // 3. If NOT connected, check if it's time to try again
     unsigned long now = millis();
-    if (blocking || (now - lastMqttAttempt > RETRY_INTERVAL)) {
-        lastMqttAttempt = now;
-        Serial.print(F("MQTT: Attempting connection..."));
+    if (blocking) {
+        // Blocking mode: try repeatedly but bound total wait time
+        unsigned long start = millis();
+        while (!client.connected() && (millis() - start) < MQTT_BLOCK_TIMEOUT) {
+            Serial.print(F("MQTT: Attempting connection..."));
+            // Create a random client ID
+            String clientId = "ESP32Client-";
+            clientId += String(random(0xffff), HEX);
 
-        // Create a random client ID
-        String clientId = "ESP32Client-";
-        clientId += String(random(0xffff), HEX);
-
-        // Attempt to connect
-        if (client.connect(clientId.c_str())) {
-            Serial.println(F("connected"));
-            // ON CONNECT: Resubscribe to topics here
-            client.subscribe(MQTT_TOPIC, 1);
-        } else {
-            Serial.print(F("failed, rc="));
-            Serial.print(client.state()); // http://pubsubclient.knolleary.net/api.html#state
-
-            if (blocking) {
-                Serial.println(F(" retrying in 5 seconds..."));
-                delay(5000);
-                maintainMQTT(true); // Recursive call for blocking mode
+            if (client.connect(clientId.c_str())) {
+                Serial.println(F(" connected"));
+                client.subscribe(MQTT_TOPIC, 1);
+                mqttRetryInterval = RETRY_INTERVAL_INITIAL;
+                break;
             } else {
+                Serial.print(F(" failed, rc="));
+                Serial.print(client.state());
+                Serial.println(F("; retrying..."));
+                delay(1000);
+            }
+        }
+        if (!client.connected()) {
+            Serial.println(F("MQTT: Failed to connect within blocking timeout"));
+            mqttRetryInterval = min(mqttRetryInterval * 2, RETRY_INTERVAL_MAX);
+        }
+    } else {
+        // Non-blocking: attempt only when interval elapsed
+        if (now - lastMqttAttempt > mqttRetryInterval) {
+            lastMqttAttempt = now;
+            Serial.print(F("MQTT: Attempting connection..."));
+
+            String clientId = "ESP32Client-";
+            clientId += String(random(0xffff), HEX);
+
+            if (client.connect(clientId.c_str())) {
+                Serial.println(F("connected"));
+                client.subscribe(MQTT_TOPIC, 1);
+                mqttRetryInterval = RETRY_INTERVAL_INITIAL;
+            } else {
+                Serial.print(F("failed, rc="));
+                Serial.print(client.state());
                 Serial.println(F(" (background retry pending)"));
+                mqttRetryInterval = min(mqttRetryInterval * 2, RETRY_INTERVAL_MAX);
             }
         }
     }
