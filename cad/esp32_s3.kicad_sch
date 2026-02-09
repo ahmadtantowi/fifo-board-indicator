@@ -3444,16 +3444,16 @@
 		(uuid "09913dc5-67e4-4143-b417-fb6425b88d2a")
 	)
 	(junction
+		(at 166.37 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "21ae36e1-eb6e-42a2-b968-d7fc407f05b2")
+	)
+	(junction
 		(at 52.07 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "52f50de7-f61f-4956-b7a8-2f285dce087f")
-	)
-	(junction
-		(at 166.37 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "769a68b1-9780-4774-987d-28753beebcba")
 	)
 	(junction
 		(at 52.07 53.34)
@@ -3505,16 +3505,6 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 111.76) (xy 153.67 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "19dabeb4-4167-4073-9016-ec4339b38d7d")
-	)
-	(wire
-		(pts
 			(xy 195.58 59.69) (xy 204.47 59.69)
 		)
 		(stroke
@@ -3522,16 +3512,6 @@
 			(type default)
 		)
 		(uuid "20b4d725-712d-4b43-b116-89675c8cc9be")
-	)
-	(wire
-		(pts
-			(xy 166.37 101.6) (xy 166.37 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "20cfbd76-5ff6-4af5-b036-5183197f63b6")
 	)
 	(wire
 		(pts
@@ -3595,6 +3575,16 @@
 	)
 	(wire
 		(pts
+			(xy 156.21 104.14) (xy 153.67 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51aa6257-a0a0-445e-8723-6ae2753432f6")
+	)
+	(wire
+		(pts
 			(xy 204.47 57.15) (xy 195.58 57.15)
 		)
 		(stroke
@@ -3635,6 +3625,16 @@
 	)
 	(wire
 		(pts
+			(xy 166.37 104.14) (xy 166.37 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74311ed3-fdc3-41e4-b996-89d8ca557bd5")
+	)
+	(wire
+		(pts
 			(xy 46.99 53.34) (xy 52.07 53.34)
 		)
 		(stroke
@@ -3645,13 +3645,13 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 101.6) (xy 156.21 109.22)
+			(xy 156.21 109.22) (xy 156.21 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "794ac25a-1551-4256-afa3-39a46dcb944a")
+		(uuid "7cb12add-7bfd-4912-ba2a-cc3d9b0fc6a0")
 	)
 	(wire
 		(pts
@@ -4175,7 +4175,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 161.29 111.76 0)
+		(at 161.29 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4184,7 +4184,7 @@
 		(fields_autoplaced yes)
 		(uuid "0148896f-d866-4388-a92d-7bd76dcde96d")
 		(property "Reference" "SW4"
-			(at 161.29 104.14 0)
+			(at 161.29 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4192,7 +4192,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 161.29 106.68 0)
+			(at 161.29 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4200,7 +4200,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 161.29 106.68 0)
+			(at 161.29 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4209,7 +4209,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 161.29 106.68 0)
+			(at 161.29 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4218,7 +4218,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 161.29 111.76 0)
+			(at 161.29 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4309,7 +4309,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 166.37 111.76 0)
+		(at 166.37 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4318,7 +4318,7 @@
 		(fields_autoplaced yes)
 		(uuid "107eeb59-6224-40d2-bdee-7bee5a29a948")
 		(property "Reference" "#PWR04"
-			(at 166.37 118.11 0)
+			(at 166.37 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4327,7 +4327,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 166.37 116.84 0)
+			(at 166.37 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4335,7 +4335,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 166.37 111.76 0)
+			(at 166.37 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4344,7 +4344,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 166.37 111.76 0)
+			(at 166.37 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4353,7 +4353,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 166.37 111.76 0)
+			(at 166.37 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4581,7 +4581,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 161.29 101.6 0)
+		(at 161.29 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4590,7 +4590,7 @@
 		(fields_autoplaced yes)
 		(uuid "4544fb48-d424-46b4-9e74-0827e382d7bb")
 		(property "Reference" "SW3"
-			(at 161.29 93.98 0)
+			(at 161.29 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4598,7 +4598,7 @@
 			)
 		)
 		(property "Value" "SW_Push"
-			(at 161.29 96.52 0)
+			(at 161.29 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4606,7 +4606,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 161.29 96.52 0)
+			(at 161.29 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4615,7 +4615,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 161.29 96.52 0)
+			(at 161.29 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4624,7 +4624,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 161.29 101.6 0)
+			(at 161.29 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)

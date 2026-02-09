@@ -17,8 +17,8 @@
     #define OE_PIN    0
     #define DATA_PIN  1
 #elif BOARD_S3
-    #define BUTTON_A 28
-    #define BUTTON_B 29
+    #define BUTTON_A 47
+    #define BUTTON_B 45
 
     #define CLOCK_PIN 4
     #define LATCH_PIN 5
@@ -36,9 +36,9 @@ WiFiClient espClient;
 PubSubClient client(espClient);
 
 // --- WiFi and MQTT credentials ---
-const char* WIFI_SSID = "BUDI UTAMI";
-const char* WIFI_PASSWORD = "SugandaCRT21";
-const char* MQTT_SERVER = "192.168.100.165";
+const char* WIFI_SSID = "wifi ssid";
+const char* WIFI_PASSWORD = "wifi password";
+const char* MQTT_SERVER = "localhost";
 const int MQTT_PORT = 1883;
 const char* MQTT_TOPIC = "lamp/+/set"; // lamp/{id}/set
 
