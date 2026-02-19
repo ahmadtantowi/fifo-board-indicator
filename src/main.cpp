@@ -9,13 +9,13 @@
 #include <PubSubClient.h>
 
 #ifdef BOARD_C3
-    #define BUTTON_A 5
-    #define BUTTON_B 6
+    #define BUTTON_A 3
+    #define BUTTON_B 2
 
-    #define CLOCK_PIN 2
-    #define LATCH_PIN 3
-    #define OE_PIN    0
-    #define DATA_PIN  1
+    #define CLOCK_PIN 5
+    #define LATCH_PIN 6
+    #define OE_PIN    7
+    #define DATA_PIN  10
 #elif BOARD_S3
     #define BUTTON_A 47
     #define BUTTON_B 45
@@ -73,17 +73,6 @@ void setup() {
     Serial.begin(115200);
     pinMode(LED_BUILTIN, OUTPUT);
 
-    // Setup MQTT settings
-    client.setServer(MQTT_SERVER, 1883);
-    client.setCallback(onReceived);
-    client.setBufferSize(512);
-
-    Serial.println(F(" --- System Starting ---"));
-
-    // BLOCKING calls for setup (Wait until both are ready before starting loop)
-    maintainWiFi(true);
-    maintainMQTT(true);
-
     pinMode(BUTTON_A, INPUT_PULLUP);
     pinMode(BUTTON_B, INPUT_PULLUP);
 
@@ -96,6 +85,17 @@ void setup() {
 
     // Clear all LEDs initially
     setAllRelays(false);
+
+    // Setup MQTT settings
+    client.setServer(MQTT_SERVER, 1883);
+    client.setCallback(onReceived);
+    client.setBufferSize(512);
+
+    Serial.println(F(" --- System Starting ---"));
+
+    // BLOCKING calls for setup (Wait until both are ready before starting loop)
+    maintainWiFi(true);
+    maintainMQTT(true);
 
     // Enable outputs after startup init completes
     digitalWrite(OE_PIN, LOW);
