@@ -17,13 +17,13 @@
     #define OE_PIN    7
     #define DATA_PIN  10
 #elif BOARD_S3
-    #define BUTTON_A 47
-    #define BUTTON_B 45
+    #define BUTTON_A 9
+    #define BUTTON_B 10
 
-    #define CLOCK_PIN 4
-    #define LATCH_PIN 5
-    #define OE_PIN    6
-    #define DATA_PIN  7
+    #define CLOCK_PIN 13 // SR.CLK
+    #define LATCH_PIN 12 // R.CLK
+    #define OE_PIN    14 // OE
+    #define DATA_PIN  11 // SER
 #endif
 
 #define NUM_SHIFT_REGISTERS 28
